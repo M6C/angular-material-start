@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <title>Angular Material - Side Nav</title>
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
+  <link rel="stylesheet" href="./jspm_packages/github/angular/bower-material@master/angular-material.css"/>
+  <link rel="stylesheet" href="./assets/SideNav.css"/>
+</head>
+
+<body ng-cloak layout="row" ng-app="SideNav" ng-controller="SideNavController" class="tabsdemoStaticTabs">
+<!-- body ng-app="MyApp" ng-controller="AppCtrl" layout="row" ng-cloak class="tabsdemoStaticTabs" -->
+<!-- body ng-cloak layout="row" ng-controller="AppCtrl as app"-->
+
+ <md-sidenav layout="column" class="sidenav1" md-is-locked-open='true'>
+   <a href="index.html">SideNav</a>
+   </md-sidenav>
+  
+  <md-content flex layout="column">
+<md-tabs class="md-accent" md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
+      <md-tab id="tab1">
+        <md-tab-label>Item One</md-tab-label>
+      </md-tab>
+      <md-tab id="tab2">
+        <md-tab-label>{{data.secondLabel}}</md-tab-label>
+      </md-tab>
+      <md-tab id="tab3">
+        <md-tab-label>Item Three</md-tab-label>
+      </md-tab>
+    </md-tabs>
+
+
+  <ng-switch on="data.selectedIndex" class="tabpanel-container">
+    <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
+      View for Item #1<br/> data.selectedIndex = 0
+      <br/>
+      <a href="https://github.com/angular/material-start">https://github.com/angular/material-start</a>
+      <br/>
+      <a href="https://angularjs.org/">https://angularjs.org/</a>
+      <br/>
+      <a href="https://material.angularjs.org/latest/getting-started">https://material.angularjs.org/latest/getting-started</a>
+      <br/>
+      <a href="https://codepen.io/team/AngularMaterial/pen/BNYppz">https://codepen.io/team/AngularMaterial/pen/BNYppz</a>
+      <br/>
+      <a href="https://codepen.io/team/AngularMaterial/pen/pbjpVB">https://codepen.io/team/AngularMaterial/pen/pbjpVB</a>
+    </div>
+    <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
+      View for {{data.secondLabel}}<br/> data.selectedIndex = 1
+    </div>
+    <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()">
+      View for Item #3<br/> data.selectedIndex = 2
+    </div>
+  </ng-switch>
+  </md-content>
+
+
+  <script src="./jspm_packages/system.js" type="text/javascript"></script>
+  <script src="config.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    System
+        .import('src/sidenav/sidenav')
+        .catch( console.error.bind(console) ); // make sure any errors print to console
+  </script>
+</body>
+
+</html>
