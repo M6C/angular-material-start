@@ -11,12 +11,12 @@ function UsersDataService($q) {
     {
       name: 'Lia Lugo',
       avatar: 'svg-1',
-      content: 'I love cheese, especially airedale queso. Cheese and biscuits halloumi cauliflower cheese cottage cheese swiss boursin fondue caerphilly. Cow port-salut camembert de normandie macaroni cheese feta who moved my cheese babybel boursin. Red leicester roquefort boursin squirty cheese jarlsberg blue castello caerphilly chalk and cheese. Lancashire.'
+      content: "I love cheese, especially airedale queso. Cheese and biscuits halloumi cauliflower cheese cottage cheese swiss boursin fondue caerphilly. Cow port-salut camembert de normandie macaroni cheese feta who moved my cheese babybel boursin. Red leicester roquefort boursin squirty cheese jarlsberg blue castello caerphilly chalk and cheese. Lancashire."
     },
     {
       name: 'George Duke',
       avatar: 'svg-2',
-      content: 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sitâ€‹â€‹, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris.'
+      content: 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sitâ??â??, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris.'
     },
     {
       name: 'Gener Delosreyes',
@@ -50,4 +50,3 @@ function UsersDataService($q) {
 }
 
 export default ['$q', UsersDataService];
-
