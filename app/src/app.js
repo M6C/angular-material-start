@@ -5,7 +5,7 @@ import 'angular-animate';
 import 'angular-aria';
 import 'angular-material';
 
-import AppController from 'src/AppController';
+import AppController from 'src/app/components/controller/AppController';
 import Users from 'src/users/Users';
 
 export default angular.module( 'starter-app', [ 'ngMaterial', Users.name ] )

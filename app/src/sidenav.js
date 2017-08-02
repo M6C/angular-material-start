@@ -1,30 +1,19 @@
-// Load libraries
 import angular from 'angular';
 
-import 'angular-animate';
-import 'angular-aria';
-import 'angular-material';
-
-import SideNav from 'src/SideNavController';
+import App from 'src/sidenav/SideNavApp';
 
 /**
  * Manually bootstrap the application when AngularJS and
  * the application classes have been loaded.
  */
-export default angular.module('SideNav', ['ngMaterial'])
-          .controller('SideNavController', SideNavCtrl);
+angular.element( document )
+	.ready( function() {
+		angular
+		.module( 'SideNav')
+		.run(()=>{
+			console.log(`Running the 'starter-app-bootstrap' ES6 Material-Start Tutorial`);
+		});
 
-function SideNavCtrl ( $scope ) {
-    $scope.data = {
-      selectedIndex: 0,
-      secondLocked:  true,
-      secondLabel:   "Item Two",
-      bottom:        false
-    };
-    $scope.next = function() {
-      $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
-    };
-    $scope.previous = function() {
-      $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
-    };
-}
+	let body = document.getElementsByTagName("body")[0];
+	angular.bootstrap( body, [ 'SideNav' ]);
+});
