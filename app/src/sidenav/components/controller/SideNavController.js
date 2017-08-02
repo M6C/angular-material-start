@@ -5,20 +5,37 @@
  * @constructor
  */
 function SideNavController($mdSidenav) {
-  var self = this;
+    var self = this;
 
-  /**
-   * Hide or Show the 'left' sideNav area
-   */
-  function toggleUsersList() {
-  }
+    self.data = {
+        selectedIndex: 1
+    };
 
-  /**
-   * Select the current avatars
-   * @param menuId
-   */
-  function selectUser ( user ) {
-  }
+    self.toggleList = function() {
+        $mdSidenav('left').toggle();
+    };
+
+    self.next = function() {
+        $mdSidenav.data.selectedIndex = Math.min($mdSidenav.data.selectedIndex + 1, 2) ;
+    };
+
+    self.previous = function() {
+        $mdSidenav.data.selectedIndex = Math.max($mdSidenav.data.selectedIndex - 1, 0);
+    };
+
+    /**
+    * Hide or Show the 'left' sideNav area
+    */
+    function toggleLeft() {
+        $mdSidenav('left').toggle();
+    }
+    
+    /**
+    * Select the current avatars
+    * @param menuId
+    */
+    function selectUser ( user ) {
+    }
 }
 
 export default [ '$mdSidenav', SideNavController ];

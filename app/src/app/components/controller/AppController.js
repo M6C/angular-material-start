@@ -10,7 +10,7 @@ function AppController(UsersDataService, $mdSidenav) {
   self.selected     = null;
   self.users        = [ ];
   self.selectUser   = selectUser;
-  self.toggleList   = toggleUsersList;
+  self.toggleList   = toggleLeft;
 
   // Load all registered users
 
@@ -28,7 +28,7 @@ function AppController(UsersDataService, $mdSidenav) {
   /**
    * Hide or Show the 'left' sideNav area
    */
-  function toggleUsersList() {
+  function toggleLeft() {
     $mdSidenav('left').toggle();
   }
 

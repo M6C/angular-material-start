@@ -10,17 +10,17 @@ import FormController from 'src/search/components/controller/FormController';
 
 var myApp = angular.module('SideNav', ['ngMaterial']);
 
-myApp.controller('SideNavController', SideNavCtrl);
-myApp.controller('FormController', FormController);
+myApp.config(($mdIconProvider, $mdThemingProvider) => {
+    $mdThemingProvider.theme('default')
+        // .primaryPalette('pink')
+        // .accentPalette('orange')
+    ;
 
-function SideNavCtrl ( $scope ) {
-    $scope.data = {
-      selectedIndex: 1
-    };
-    $scope.next = function() {
-      $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
-    };
-    $scope.previous = function() {
-      $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
-    };
-}
+    // Register icons
+    $mdIconProvider
+        .icon("menu", "./assets/svg/menu.svg", 24)
+    ;
+});
+
+myApp.controller('SideNavController', SideNavController);
+myApp.controller('FormController', FormController);
