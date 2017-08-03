@@ -7,6 +7,7 @@ import 'angular-material';
 
 import SideNavController from 'src/sidenav/components/controller/SideNavController';
 import FormController from 'src/search/components/controller/FormController';
+import FormAdvertController from 'src/advert/components/controller/FormAdvertController';
 
 var myApp = angular.module('SideNav', ['ngMaterial']);
 
@@ -24,3 +25,4 @@ myApp.config(($mdIconProvider, $mdThemingProvider) => {
 
 myApp.controller('SideNavController', SideNavController);
 myApp.controller('FormController', FormController);
+//myApp.controller('FormAdvertController', FormAdvertController);
