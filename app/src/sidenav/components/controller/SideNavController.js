@@ -23,6 +23,12 @@ function SideNavController($mdSidenav) {
         $mdSidenav.data.selectedIndex = Math.max($mdSidenav.data.selectedIndex - 1, 0);
     };
 
+    self.add = function(event) {
+        self.data = {
+            selectedIndex: 2
+        };
+    }
+
     /**
     * Hide or Show the 'left' sideNav area
     */
