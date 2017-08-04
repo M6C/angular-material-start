@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./jspm_packages/github/angular/bower-material@master/angular-material.css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link rel="stylesheet" href="./assets/SideNav.css"/>
+  <link rel="stylesheet" href="./assets/FormAdvert.css"/>
 </head>
 
 <body ng-cloak layout="row" ng-controller="SideNavController as app" class="tabsdemoStaticTabs">
@@ -43,7 +44,7 @@
     	</div>
     	<div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="app.next()" md-swipe-right="app.previous()">
             <div ng-include="'Search.html'"></div>
-            <md-button class="md-fab md-fab-bottom-right" ng-click="app.add($event)" aria-label="Add">
+            <md-button class="md-fab md-fab-bottom-right" ng-click="app.addAdvert($event)" aria-label="Add">
                 <md-icon md-font-set="material-icons">add</md-icon>
             </md-button>
     	</div>

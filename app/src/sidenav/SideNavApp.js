@@ -25,4 +25,4 @@ myApp.config(($mdIconProvider, $mdThemingProvider) => {
 
 myApp.controller('SideNavController', SideNavController);
 myApp.controller('FormController', FormController);
-//myApp.controller('FormAdvertController', FormAdvertController);
+myApp.controller('FormAdvertController', FormAdvertController);

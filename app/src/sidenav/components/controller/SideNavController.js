@@ -4,7 +4,7 @@
  * @param $mdSidenav
  * @constructor
  */
-function SideNavController($mdSidenav) {
+function SideNavController($mdSidenav, $scope) {
     var self = this;
 
     self.data = {
@@ -23,9 +23,15 @@ function SideNavController($mdSidenav) {
         $mdSidenav.data.selectedIndex = Math.max($mdSidenav.data.selectedIndex - 1, 0);
     };
 
-    self.add = function(event) {
+    self.addAdvert = function(event) {
         self.data = {
             selectedIndex: 2
+        };
+    }
+
+    $scope.seachAdvert = function() {
+        self.data = {
+            selectedIndex: 1
         };
     }
 
@@ -44,4 +50,4 @@ function SideNavController($mdSidenav) {
     }
 }
 
-export default [ '$mdSidenav', SideNavController ];
+export default [ '$mdSidenav', '$scope', SideNavController ];
