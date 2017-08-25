@@ -12,10 +12,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link rel="stylesheet" href="./assets/SideNav.css"/>
   <link rel="stylesheet" href="./assets/FormAdvert.css"/>
+  <!-- http://v4-alpha.getbootstrap.com/getting-started/introduction/ -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 
 <body ng-cloak layout="row" ng-controller="SideNavController as app" class="tabsdemoStaticTabs">
-
   <md-sidenav layout="column" class="md-whiteframe-4dp sidenav1" md-component-id="left" md-is-locked-open="false">
     <a href="index.html">SideNav</a>
   </md-sidenav>
@@ -25,7 +26,7 @@
         <md-button class="menu md-icon-button" ng-click="app.toggleList()" aria-label="Show User List">
           <md-icon md-svg-icon="menu"></md-icon>
         </md-button>
-    	<md-tabs flex class="md-accent" layout="column" md-selected="app.data.selectedIndex" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
+    	<md-tabs flex class="md-accent" layout="column" md-selected="app.navigationService.data.selectedIndex" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
           <md-tab id="tab1">
             <md-tab-label>Item One</md-tab-label>
           </md-tab>
@@ -38,21 +39,26 @@
         </md-tabs>
       </md-toolbar>
     
-      <ng-switch on="app.data.selectedIndex" class="tabpanel-container">
+      <ng-switch on="app.navigationService.data.selectedIndex" class="tabpanel-container">
     	<div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="app.next()" md-swipe-right="app.previous()">
     	  <div ng-include="'SideNav_1.html'"></div>
     	</div>
-    	<div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="app.next()" md-swipe-right="app.previous()">
-            <div ng-include="'Search.html'"></div>
+    	<!--div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="app.next()" md-swipe-right="app.previous()"-->
+            <md-content ng-include="'Search.html'"></md-content>
             <md-button class="md-fab md-fab-bottom-right" ng-click="app.addAdvert($event)" aria-label="Add">
                 <md-icon md-font-set="material-icons">add</md-icon>
             </md-button>
-    	</div>
+    	<!--/div-->
     	<div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="app.next()" md-swipe-right="app.previous()">
     	  <div ng-include="'FormAdvert.html'"></div>
     	</div>
       </ng-switch>
   </md-content>
+
+    <!-- http://v4-alpha.getbootstrap.com/getting-started/introduction/ -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
   <script src="./jspm_packages/system.js" type="text/javascript"></script>
   <script src="config.js" type="text/javascript"></script>

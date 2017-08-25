@@ -1,29 +1,28 @@
-<div ng-controller="FormController as ctrl" layout="row" ng-cloak>
+<md-content ng-controller="FormController as ctrl" layout="column" ng-cloak>
+    <div class="md-padding">
+        <advert-form
+            search-text="ctrl.searchText"
+            search-text-change="ctrl.searchTextChange"
+            search-query="ctrl.querySearch"
+            selected-item-change="ctrl.selectedItemChange">
+        </advert-form>
+    </div>
+
     <md-content flex class="md-padding">
-        <form ng-submit="$event.preventDefault()">
-            <md-autocomplete
-                ng-disabled="ctrl.isDisabled"
-                md-no-cache="ctrl.noCache"
-                md-selected-item="ctrl.selectedItem"
-                md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
-                md-search-text="ctrl.searchText"
-                md-selected-item-change="ctrl.selectedItemChange(item)"
-                md-items="item in ctrl.querySearch(ctrl.searchText)"
-                md-item-text="item.display"
-                md-min-length="1"
-                placeholder="What is your favorite US state?">
-            <md-item-template>
-                <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
-            </md-item-template>
-            <md-not-found>
-                No states matching <b>"{{ctrl.searchText}}"</b> were found.
-                <a ng-click="ctrl.newState(ctrl.searchText)">Create a new one!</a>
-            </md-not-found>
-            </md-autocomplete>
-            <br/>
-            <md-checkbox ng-model="ctrl.simulateQuery">Simulate query for results?</md-checkbox>
-            <md-checkbox ng-model="ctrl.noCache">Disable caching of queries?</md-checkbox>
-            <md-checkbox ng-model="ctrl.isDisabled">Disable the input?</md-checkbox>
-        </form>
+        <advert-list
+            advert-list="ctrl.advertPageFiltred"
+            advert-selected="ctrl.advertSelected"
+            on-selected="ctrl.selectAdvert(advert)"
+            search-text="ctrl.searchText">
+        </advert-list>
     </md-content>
-</div>
+        
+    <div class="md-padding">
+        <pagination
+            collection = 'ctrl.advertList'
+            paginated-collection = 'ctrl.advertPageFiltred'
+            per-page = 'ctrl.numPerPage'
+            navigation-length = 'ctrl.maxSizePage'
+        ></pagination>
+    </div>
+</md-content>

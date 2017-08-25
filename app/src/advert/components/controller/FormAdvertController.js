@@ -2,19 +2,33 @@
  * Form Advert Controller for the Angular Material Starter App
  * @constructor
  */
-function FormAdvertController($mdSidenav, $scope) {
+function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertService) {
     var self = this;
-    self.user = {
-      name: 'John Doe',
-      email: '',
-      phone: '',
-      address: 'Montpellier, FR',
-      description: ''
-    };
+
+    self.data =
+        {
+            "isActive": true,
+            "picture": "http://placehold.it/32x32",
+            "birthday": "",
+            "name": {
+                "first": "",
+                "last": ""
+            },
+            "email": "",
+            "phone": "",
+            "address": {
+                "street": "",
+                "city": "",
+                "state": "France"
+            },
+            "description": ""
+        }
+    ;
     
     self.submitAdvert = function(event) {
-        $scope.$parent.app.searchAvert();
+        $advertService.addAdvert(this.data);
+        $sideNavService.seachAdvert();
     }
 }
 
-export default [ '$mdSidenav', '$scope', FormAdvertController ];
+export default [ '$mdSidenav', '$scope', 'SideNavService', 'AdvertService', FormAdvertController ];

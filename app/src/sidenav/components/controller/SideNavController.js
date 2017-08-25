@@ -4,35 +4,25 @@
  * @param $mdSidenav
  * @constructor
  */
-function SideNavController($mdSidenav, $scope) {
+function SideNavController($mdSidenav, $scope, $SideNavService) {
     var self = this;
 
-    self.data = {
-        selectedIndex: 1
-    };
+    self.navigationService = $SideNavService;
 
     self.toggleList = function() {
         $mdSidenav('left').toggle();
     };
 
     self.next = function() {
-        $mdSidenav.data.selectedIndex = Math.min($mdSidenav.data.selectedIndex + 1, 2) ;
+        this.navigationService.next();
     };
 
     self.previous = function() {
-        $mdSidenav.data.selectedIndex = Math.max($mdSidenav.data.selectedIndex - 1, 0);
+        this.navigationService.previous();
     };
 
     self.addAdvert = function(event) {
-        self.data = {
-            selectedIndex: 2
-        };
-    }
-
-    $scope.seachAdvert = function() {
-        self.data = {
-            selectedIndex: 1
-        };
+        this.navigationService.addAdvert();
     }
 
     /**
@@ -48,6 +38,7 @@ function SideNavController($mdSidenav, $scope) {
     */
     function selectUser ( user ) {
     }
+
 }
 
-export default [ '$mdSidenav', '$scope', SideNavController ];
+export default [ '$mdSidenav', '$scope', 'SideNavService', SideNavController ];
