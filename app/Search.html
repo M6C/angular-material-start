@@ -1,28 +1,28 @@
-<md-content ng-controller="FormController as ctrl" layout="column" ng-cloak>
+<md-content ng-controller="FormController as form" layout="column" ng-cloak>
     <div class="md-padding">
         <advert-form
-            search-text="ctrl.searchText"
-            search-text-change="ctrl.searchTextChange"
-            search-query="ctrl.querySearch"
-            selected-item-change="ctrl.selectedItemChange">
+            search-text="form.searchText"
+            search-text-change='form.searchTextChange'
+            search-query="form.querySearch"
+            selected-item-change="form.selectedItemChange">
         </advert-form>
     </div>
 
     <md-content flex class="md-padding">
         <advert-list
-            advert-list="ctrl.advertPageFiltred"
-            advert-selected="ctrl.advertSelected"
-            on-selected="ctrl.selectAdvert(advert)"
-            search-text="ctrl.searchText">
-        </advert-list>
+            advert-list="form.advertPageFiltred"
+            advert-selected="form.advertSelected"
+            on-selected="form.selectAdvert(advert)"
+        ></advert-list>
     </md-content>
         
     <div class="md-padding">
         <pagination
-            collection = 'ctrl.advertList'
-            paginated-collection = 'ctrl.advertPageFiltred'
-            per-page = 'ctrl.numPerPage'
-            navigation-length = 'ctrl.maxSizePage'
+            collection = 'form.advertList'
+            paginated-collection = 'form.advertPageFiltred'
+            per-page = 'form.numPerPage'
+            navigation-length = 'form.maxSizePage'
+            search-text="form.searchText"
         ></pagination>
     </div>
 </md-content>

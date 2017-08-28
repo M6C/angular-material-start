@@ -23,7 +23,7 @@ function FormController($timeout, $q, $log, AdvertService, $scope) {
     self.states        = loadAll();
     self.querySearch   = querySearch;
     self.selectedItemChange = selectedItemChange;
-    self.searchTextChange   = searchTextChange;
+    self.searchText     = '';//'magna';//searchText;
 
     self.newState = newState;
 

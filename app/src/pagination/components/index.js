@@ -10,7 +10,8 @@ export default {
             collection: '<',
             paginatedCollection: '=',
             perPage: '<',
-            navigationLength: '<'
+            navigationLength: '<',
+            searchText : '<'
         }
     }
 };

@@ -3,7 +3,7 @@
 export default {
   name : 'advertList',
   config : {
-    bindings         : { advertList: '<', advertSelected : '<', onSelectAdvert : '&onSelected', searchText : '<' },
+    bindings         : { advertList: '<', advertSelected : '<', onSelectAdvert : '&onSelected' },
     templateUrl      : 'src/advert/components/list/AdvertList.html'
   }
 };

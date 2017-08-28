@@ -1,10 +1,14 @@
-function CollectionPaginationController() {
+function CollectionPaginationController(filterFilter) {
     var self = this;
 
     self.$onChanges = function() {
         this.perPage = parseInt(this.perPage) || 5;
         this.shownIndexesCount = parseInt(this.navigationLength) || 5;
-        this.lastIndex = Math.ceil(this.collection.length / this.perPage) - 1;
+
+        // Filter data to searchText field
+        this.collectionFiltered = filterFilter(this.collection, this.searchText);
+
+        this.lastIndex = Math.ceil(this.collectionFiltered.length / this.perPage) - 1;
         this.allIndexes = [];
         for(let i = 0; i <= this.lastIndex; this.allIndexes.push(i++)) {}
         this.beginning();
@@ -41,8 +45,10 @@ function CollectionPaginationController() {
     
     self.update = function() {
         let offset = this.selectedIndex * this.perPage;
-        this.paginatedCollection = this.collection.slice(offset, offset + this.perPage);
+
+        // Paginated data from filterd data updated in onChange function
+        this.paginatedCollection = this.collectionFiltered.slice(offset, offset + this.perPage);
     }
 }
 
-export default [ CollectionPaginationController ];
+export default [ 'filterFilter', CollectionPaginationController ];
