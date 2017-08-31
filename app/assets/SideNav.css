@@ -2,6 +2,12 @@ md-sidenav  {
   width: 110px;height:100%;
   padding:20px;
   background-color: #EEEEEE;
+
+    
+}
+
+.advert-list {
+    background-color: rgb(255, 255, 255);
 }
 
 md-content {
@@ -11,13 +17,17 @@ md-content {
 }
 
 .tabsdemoStaticTabs md-tab-content {
-  padding: 25px; }
-  .tabsdemoStaticTabs md-tab-content:nth-child(1) {
-    background-color: #42A5F5; }
-  .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-    background-color: #689F38; }
-  .tabsdemoStaticTabs md-tab-content:nth-child(3) {
-    background-color: #26C6DA; }
+    padding: 25px;
+}
+.tabsdemoStaticTabs md-tab-content:nth-child(1) {
+    background-color: #42A5F5;
+}
+.tabsdemoStaticTabs md-tab-content:nth-child(2) {
+    background-color: #689F38;
+}
+.tabsdemoStaticTabs md-tab-content:nth-child(3) {
+    background-color: #26C6DA;
+}
 
 .tabsdemoStaticTabs .after-tabs-area > span {
   margin-top: 25px;

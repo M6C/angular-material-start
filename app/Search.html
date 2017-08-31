@@ -8,15 +8,19 @@
         </advert-form>
     </div>
 
-    <md-content flex class="md-padding">
+    <md-divider ng-if="!$last"></md-divider>
+
+    <md-content flex class="md-padding advert-list">
         <advert-list
             advert-list="form.advertPageFiltred"
             advert-selected="form.advertSelected"
             on-selected="form.selectAdvert(advert)"
         ></advert-list>
     </md-content>
-        
-    <div class="md-padding">
+
+    <md-divider ng-if="!$last"></md-divider>
+
+    <div class="md-whiteframe-4dp">
         <pagination
             collection = 'form.advertList'
             paginated-collection = 'form.advertPageFiltred'
