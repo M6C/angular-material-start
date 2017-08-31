@@ -1,19 +1,11 @@
 <!-- NOTE: @see ngClick for how to pass data selection to outside expression -->
 <md-list layout="column">
-    <md-list-item ng-repeat="advert in $ctrl.advertList" ng-click="$ctrl.onSelectAdvert(advert)">
-        <md-button ng-click="$ctrl.onSelectAdvert({advert:advert})" ng-class="{'selected' : advert === $ctrl.advertSelected }" layout="row">
-            <md-icon md-font-library="material-icons">person</md-icon>
-            <!--md-icon md-svg-icon="{{advert.avatar}}"></md-icon-->
-            <div layout="row">
-                <h4>{{advert.name.first}} {{advert.name.last}}</h4>
-                <div>{{advert.address.street}}, {{advert.address.city | uppercase}}</div>
-                <p flex>Username: holly123</p>
-                <p>{{advert.description}}</p>
-            </div>
-<!--
-            <md-content layout="row">
-            </md-content>
--->
-        </md-button>
+    <!-- https://github.com/kyleledbetter/discussions/blob/develop/client/app/list/discussion/discussion.html -->
+    <md-list-item ng-repeat="advert in $ctrl.advertList" ng-click="$ctrl.onSelectAdvert(advert)" class="md-3-line md-long-text">
+        <md-icon md-font-library="material-icons" class="md-avatar" alt="person">person</md-icon>
+        <div class="md-list-item-text">
+            <h3>{{advert.name.first}} {{advert.name.last}}</h3>
+            <p>{{advert.description}}</p>
+        </div>
     </md-list-item>
 </md-list>
