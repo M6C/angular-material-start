@@ -38,18 +38,18 @@
           </md-tab>
         </md-tabs>
       </md-toolbar>
-    
+
       <ng-switch on="app.navigationService.data.selectedIndex" class="tabpanel-container">
-    	<div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="app.next()" md-swipe-right="app.previous()">
+    	<div class="switch-show-hide" role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="app.next()" md-swipe-right="app.previous()">
     	  <div ng-include="'SideNav_1.html'"></div>
     	</div>
-    	<div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="app.next()" md-swipe-right="app.previous()">
+    	<div class="switch-show-hide" role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="app.next()" md-swipe-right="app.previous()">
             <md-content ng-include="'Search.html'"></md-content>
             <md-button class="md-fab md-fab-bottom-right" ng-click="app.addAdvert($event)" aria-label="Add">
                 <md-icon md-font-set="material-icons">add</md-icon>
             </md-button>
     	</div>
-    	<div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="app.next()" md-swipe-right="app.previous()">
+    	<div class="switch-show-hide" role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="app.next()" md-swipe-right="app.previous()">
     	  <div ng-include="'FormAdvert.html'"></div>
     	</div>
       </ng-switch>
