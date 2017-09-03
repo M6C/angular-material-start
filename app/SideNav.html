@@ -18,7 +18,8 @@
 
 <body ng-cloak layout="row" ng-controller="SideNavController as app" class="tabsdemoStaticTabs">
   <md-sidenav layout="column" class="md-whiteframe-4dp sidenav1" md-component-id="left" md-is-locked-open="false">
-    <a href="index.html">SideNav</a>
+    <user-card name="User name"></user-card>
+    <md-button class="md-primary" href="index.html">SideNav</md-button>
   </md-sidenav>
 
   <md-content flex layout="column">
@@ -41,16 +42,16 @@
       </md-toolbar>
 
       <ng-switch on="app.navigationService.data.selectedIndex" class="tabpanel-container">
-    	<div class="switch-show-hide" role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="app.next()" md-swipe-right="app.previous()">
-    	  <div ng-include="'SideNav_1.html'"></div>
+    	<div class="switch-show-hide" role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0"><!--md-swipe-left="app.next()" md-swipe-right="app.previous()"-->
+    	  <md-content ng-include="'SideNav_1.html'"></md-content>
     	</div>
-    	<div class="switch-show-hide" role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="app.next()" md-swipe-right="app.previous()">
+    	<div class="switch-show-hide" role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1"><!--md-swipe-left="app.next()" md-swipe-right="app.previous()"-->
             <md-content ng-include="'Search.html'"></md-content>
             <md-button class="md-fab md-fab-bottom-right" ng-click="app.addAdvert($event)" aria-label="Add">
                 <md-icon md-font-set="material-icons">add</md-icon>
             </md-button>
     	</div>
-    	<div class="switch-show-hide" role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="app.next()" md-swipe-right="app.previous()">
+    	<div class="switch-show-hide" role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2"><!--md-swipe-left="app.next()" md-swipe-right="app.previous()"-->
     	  <div ng-include="'FormAdvert.html'"></div>
     	</div>
       </ng-switch>

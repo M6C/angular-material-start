@@ -17,6 +17,8 @@ import FormAdvertController from 'src/advert/components/controller/FormAdvertCon
 import AdvertList from 'src/advert/components/list/AdvertList';
 import AdvertForm from 'src/advert/components/form/AdvertForm';
 
+import UserCardDirective from 'src/user/components/directive/UserCardDirective';
+
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 var myApp = angular.module('SideNav', ['ngMaterial'/*, 'cl.paging'*//*, 'ui.bootstrap'*/]);
@@ -44,6 +46,8 @@ myApp.controller('FormAdvertController', FormAdvertController);
 myApp.component(AdvertList.name, AdvertList.config);
 myApp.component(AdvertForm.name, AdvertForm.config);
 myApp.component(Pagination.name, Pagination.config)
+
+myApp.directive('userCard', UserCardDirective);
 
 FormAdvertController.submitAdvert = function(event) {
     SideNavController.searchAvert();
