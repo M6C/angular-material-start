@@ -1,20 +1,40 @@
 .SideNav {
     min-height: 48px;
 }
-.formadvert md-input-container:not(.md-input-invalid) > md-icon.email {
+
+.formadvert #content {
+    border: 1px solid #dddddd;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    background: white;
+}
+
+.formadvert #content md-input-container:not(.md-input-invalid) > md-icon.email {
     color: green;
 }
-.formadvert md-input-container:not(.md-input-invalid) > md-icon.phone {
+.formadvert #content md-input-container:not(.md-input-invalid) > md-icon.phone {
     color: #7e57c2;
 }
-.formadvert md-input-container:not(.md-input-invalid) > md-icon.person {
+.formadvert #content md-input-container:not(.md-input-invalid) > md-icon.person {
     color: dodgerblue;
 }
-.formadvert md-input-container:not(.md-input-invalid) > md-icon.address {
+.formadvert #content md-input-container:not(.md-input-invalid) > md-icon.address {
     color: #fbc02d;
 }
-.formadvert md-input-container.md-input-invalid > md-icon.email,
-.formadvert md-input-container.md-input-invalid > md-icon.address,
-.formadvert md-input-container.md-input-invalid > md-icon.person {
+.formadvert #content md-input-container.md-input-invalid > md-icon.email,
+.formadvert #content md-input-container.md-input-invalid > md-icon.address,
+.formadvert #content md-input-container.md-input-invalid > md-icon.person {
     color: red;
+}
+.formadvert #content #person {
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
 }

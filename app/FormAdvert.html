@@ -1,54 +1,61 @@
-<div ng-controller="FormAdvertController as app" layout="column" layout-padding ng-cloak>
-    <br/>
+<div ng-controller="FormAdvertController as app" layout="column">
     <md-content class="formadvert">
+        <div id="content">
 
-        <div layout-gt-sm="row">
-
-            <md-input-container class="md-block" flex-gt-sm>
-                <md-icon md-font-library="material-icons" class="person">person</md-icon>
-                <input ng-model="app.data.name.first" type="text" placeholder="Firstname" ng-required="true">
-            </md-input-container>
-
-            <md-input-container class="md-icon-float md-block" flex-gt-sm>
-                <md-icon md-svg-icon="blank"></md-icon>
-                <input ng-model="app.data.name.last" type="text" placeholder="Lastname" ng-required="true">
-            </md-input-container>
-
-        </div>
-
-        <div layout-gt-sm="row">
-
-            <md-input-container class="md-block" flex-gt-sm>
-              <!-- Use floating placeholder instead of label -->
-              <md-icon md-font-library="material-icons" class="email">email</md-icon>
-              <input ng-model="app.data.email" type="email" placeholder="Email" ng-required="true">
-            </md-input-container>
-
-            <md-input-container class="md-icon-float md-block" flex-gt-sm>
-              <md-icon md-font-library="material-icons" class="phone">phone</md-icon>
-              <input ng-model="app.data.phone" type="text" placeholder="Phone Number">
-            </md-input-container>
-
-        </div>
-
-        <div layout-gt-sm="row">
-
-            <md-input-container class="md-block" flex-gt-sm>
-                <md-icon md-font-library="material-icons" class="address" style="display:inline-block;">place</md-icon>
-                <input ng-model="app.data.address.street" type="text" class="address" placeholder="Address" ng-required="true">
-            </md-input-container>
-
-            <md-input-container class="md-icon-float md-block" flex-gt-sm>
-                <md-icon md-svg-icon="blank"></md-icon>
-                <input ng-model="app.data.address.city" type="text" placeholder="City" ng-required="true">
-            </md-input-container>
-
-        </div>
-
-        <md-input-container md-no-float class="md-block">
-            <textarea ng-model="app.data.description" type="text" class="description" placeholder="Description" ng-required="true" rows="3"></textarea>
-        </md-input-container>
+            <div layout-gt-sm="row">
     
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-font-library="material-icons" class="person">person</md-icon>
+                    <input ng-model="app.data.name.first" type="text" id="person" placeholder="Firstname" ng-required="true">
+                </md-input-container>
+    
+                <md-input-container class="md-icon-float md-block" flex-gt-sm>
+                    <md-icon md-svg-icon="blank"></md-icon>
+                    <input ng-model="app.data.name.last" type="text" placeholder="Lastname" ng-required="true">
+                </md-input-container>
+    
+            </div>
+    
+            <div layout-gt-sm="row">
+    
+                <md-input-container class="md-block" flex-gt-sm>
+                  <!-- Use floating placeholder instead of label -->
+                  <md-icon md-font-library="material-icons" class="email">email</md-icon>
+                  <input ng-model="app.data.email" type="email" placeholder="Email" ng-required="true">
+                </md-input-container>
+    
+                <md-input-container class="md-icon-float md-block" flex-gt-sm>
+                  <md-icon md-font-library="material-icons" class="phone">phone</md-icon>
+                  <input ng-model="app.data.phone" type="text" placeholder="Phone Number">
+                </md-input-container>
+    
+            </div>
+
+        </div>
+        <div id="content">
+    
+            <div layout-gt-sm="row">
+    
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-font-library="material-icons" class="address" style="display:inline-block;">place</md-icon>
+                    <input ng-model="app.data.address.street" type="text" class="address" placeholder="Address" ng-required="true">
+                </md-input-container>
+    
+                <md-input-container class="md-icon-float md-block" flex-gt-sm>
+                    <md-icon md-svg-icon="blank"></md-icon>
+                    <input ng-model="app.data.address.city" type="text" placeholder="City" ng-required="true">
+                </md-input-container>
+    
+            </div>
+    
+        </div>
+        <div id="content">
+
+            <md-input-container md-no-float class="md-block">
+                <textarea ng-model="app.data.description" type="text" class="description" placeholder="Description" ng-required="true" rows="3"></textarea>
+            </md-input-container>
+        
+        </div>
     </md-content>
 
         <md-button class="md-fab md-fab-bottom-right" ng-click="app.submitAdvert($event)" aria-label="submit">
