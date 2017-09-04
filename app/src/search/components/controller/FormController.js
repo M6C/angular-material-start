@@ -5,11 +5,14 @@
  * @param $log
  * @constructor
  */
-function FormController($timeout, $q, $log, AdvertService, $scope) {
+function FormController($timeout, $q, $log, $SideNavService, $advertService, $scope) {
     var self = this;
 
-    self.advertSelected = null;
-    self.advertList = AdvertService.data;
+    self.navigationService = $SideNavService;
+    self.advertService = $advertService;
+
+    self.advertSelected = $advertService.advertSelected;
+    self.advertList = $advertService.data;
     // Pagination
     self.advertPageFiltred = [];
     self.currentPage = 1;
@@ -30,7 +33,13 @@ function FormController($timeout, $q, $log, AdvertService, $scope) {
     self.numPages = function () {
         return Math.ceil(self.todos.length / self.numPerPage);
     };
-    
+
+    self.selectAdvert = function (advert) {
+        self.advertService.advertSelected = advert;
+        self.advertSelected = advert;
+        self.navigationService.addAdvert();
+    }
+
     $scope.$watch('currentPage + numPerPage', function() {
         var begin = ((self.currentPage - 1) * self.numPerPage);
         var end = begin + self.numPerPage;
@@ -40,10 +49,6 @@ function FormController($timeout, $q, $log, AdvertService, $scope) {
 
     function newState(state) {
       alert("Sorry! You'll need to create a Constitution for " + state + " first!");
-    }
-
-    function selectAdvert(advert) {
-      seft.advertSelected = advert;
     }
 
     // ******************************
@@ -108,4 +113,4 @@ function FormController($timeout, $q, $log, AdvertService, $scope) {
 }
 
 
-export default [ '$timeout', '$q', '$log', 'AdvertService', '$scope', FormController ];
+export default [ '$timeout', '$q', '$log', 'SideNavService', 'AdvertService', '$scope', FormController ];

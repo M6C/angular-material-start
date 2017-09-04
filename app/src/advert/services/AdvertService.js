@@ -16,6 +16,28 @@ function AdvertService() {
     self.searchAdvert = function() {
     }
 
+    self.createAdvertEmpty = function() {
+        return {
+            "isActive": true,
+            "picture": "http://placehold.it/32x32",
+            "birthday": "",
+            "name": {
+                "first": "",
+                "last": ""
+            },
+            "email": "",
+            "phone": "",
+            "address": {
+                "street": "",
+                "city": "",
+                "state": "France"
+            },
+            "description": ""
+        };
+    }
+
+    self.advertSelected = self.createAdvertEmpty();
+
     self.data =
         // http://beta.json-generator.com/41fW5IUDQ
         /*

@@ -4,25 +4,27 @@
  * @param $mdSidenav
  * @constructor
  */
-function SideNavController($mdSidenav, $scope, $SideNavService) {
+function SideNavController($mdSidenav, $scope, $SideNavService, $advertService) {
     var self = this;
 
     self.navigationService = $SideNavService;
+    self.advertService = $advertService;
 
     self.toggleList = function() {
         $mdSidenav('left').toggle();
     };
 
     self.next = function() {
-        this.navigationService.next();
+        self.navigationService.next();
     };
 
     self.previous = function() {
-        this.navigationService.previous();
+        self.navigationService.previous();
     };
 
     self.addAdvert = function(event) {
-        this.navigationService.addAdvert();
+        self.advertService.advertSelected = self.advertService.createAdvertEmpty();
+        self.navigationService.addAdvert();
     }
 
     /**
@@ -41,4 +43,4 @@ function SideNavController($mdSidenav, $scope, $SideNavService) {
 
 }
 
-export default [ '$mdSidenav', '$scope', 'SideNavService', SideNavController ];
+export default [ '$mdSidenav', '$scope', 'SideNavService', 'AdvertService', SideNavController ];

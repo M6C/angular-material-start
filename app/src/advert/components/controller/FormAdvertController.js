@@ -5,25 +5,7 @@
 function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertService) {
     var self = this;
 
-    self.data =
-        {
-            "isActive": true,
-            "picture": "http://placehold.it/32x32",
-            "birthday": "",
-            "name": {
-                "first": "",
-                "last": ""
-            },
-            "email": "",
-            "phone": "",
-            "address": {
-                "street": "",
-                "city": "",
-                "state": "France"
-            },
-            "description": ""
-        }
-    ;
+    self.data = $advertService.advertSelected;
     
     self.submitAdvert = function(event) {
         $advertService.addAdvert(this.data);
