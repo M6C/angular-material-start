@@ -10,9 +10,16 @@ function AdvertService() {
     var self = this;
 
     self.addAdvert = function(data) {
-        if (!data._id) {
-            self.data.push(data);
+        let flag = false;
+        flag = (data._id === undefined);
+        if (flag) {
+            data._id = Math.random().toString(36).substring(2) 
+               + (new Date()).getTime().toString(36);
+        } else {
+            self.data = self.data.filter(value => value._id != data._id);
         }
+
+        self.data.push(data);
     }
 
     self.searchAdvert = function() {
