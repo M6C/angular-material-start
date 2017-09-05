@@ -1,11 +1,11 @@
 <!-- NOTE: @see ngClick for how to pass data selection to outside expression -->
 <md-list layout="column">
     <!-- https://github.com/kyleledbetter/discussions/blob/develop/client/app/list/discussion/discussion.html -->
-    <md-list-item ng-repeat="advert in $ctrl.advertList" ng-click="$ctrl.onSelectAdvert(advert)" class="md-3-line md-long-text">
+    <md-list-item ng-repeat="$advert in $ctrl.advertList" ng-click="$ctrl.onSelectAdvert({advert:$advert})" class="md-3-line md-long-text">
         <md-icon md-font-library="material-icons" class="md-avatar" alt="person">person</md-icon>
         <div class="md-list-item-text">
-            <h3>{{advert.name.first}} {{advert.name.last}}</h3>
-            <p>{{advert.description}}</p>
+            <h3>{{$advert.name.first}} {{$advert.name.last}}</h3>
+            <p>{{$advert.description}}</p>
         </div>
         <md-divider ng-if="!$last"></md-divider>
     </md-list-item>

@@ -10,7 +10,9 @@ function AdvertService() {
     var self = this;
 
     self.addAdvert = function(data) {
-        self.data.push(data);
+        if (!data._id) {
+            self.data.push(data);
+        }
     }
 
     self.searchAdvert = function() {
