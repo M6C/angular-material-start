@@ -1,4 +1,4 @@
-<div ng-controller="FormAdvertController as app" layout="column">
+<form name="form" ng-controller="FormAdvertController as app" layout="column" ng-submit="form.$valid && app.submitAdvert($event)">
     <div class="formadvert">
         <div id="content">
 
@@ -58,8 +58,12 @@
         </div>
     </div>
 
-        <md-button class="md-fab md-fab-bottom-right" ng-click="app.submitAdvert($event)" aria-label="submit">
-            <md-icon md-font-set="material-icons">send</md-icon>
-        </md-button>
+    <md-button type="submit" class="md-fab md-fab-bottom-right" aria-label="submit" ng-if="form.$valid">
+        <md-icon md-font-set="material-icons">send</md-icon>
+    </md-button>
 
-</div>
+    <md-button type="button" class="md-fab md-fab-bottom-right" aria-label="back" ng-click="app.back()" ng-if="!form.$valid">
+        <md-icon md-font-set="material-icons">arrow_back</md-icon>
+    </md-button>
+
+</form>

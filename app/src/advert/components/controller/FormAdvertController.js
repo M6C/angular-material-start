@@ -5,10 +5,14 @@
 function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertService) {
     var self = this;
 
-    self.data = $advertService.advertSelected;
-    
+    self.data = angular.copy($advertService.advertSelected);
+
     self.submitAdvert = function(event) {
         $advertService.addAdvert(this.data);
+        $sideNavService.seachAdvert();
+    }
+
+    self.back = function(event) {
         $sideNavService.seachAdvert();
     }
 }

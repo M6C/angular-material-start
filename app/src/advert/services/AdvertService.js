@@ -26,7 +26,7 @@ function AdvertService() {
     }
 
     self.createAdvertEmpty = function() {
-        return {
+        return angular.copy({
             "isActive": true,
             "picture": "http://placehold.it/32x32",
             "birthday": "",
@@ -42,7 +42,7 @@ function AdvertService() {
                 "state": "France"
             },
             "description": ""
-        };
+        });
     }
 
     self.advertSelected = self.createAdvertEmpty();
