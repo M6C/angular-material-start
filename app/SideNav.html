@@ -23,7 +23,6 @@
   </md-sidenav>
 
   <md-content flex layout="column">
-      <!-- class="md-accent" -->
       <md-toolbar layout="row" class="md-accent">
         <md-button class="menu md-icon-button" ng-click="app.toggleList()" aria-label="Show User List">
           <md-icon md-svg-icon="menu"></md-icon>
@@ -35,7 +34,7 @@
           <md-tab id="tab2">
             <md-tab-label>SEARCH</md-tab-label>
           </md-tab>
-          <md-tab id="tab3">
+          <md-tab id="tab3" md-on-select="app.onSelectTabAdd(tab)">
             <md-tab-label>ADD</md-tab-label>
           </md-tab>
         </md-tabs>

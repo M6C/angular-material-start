@@ -22,6 +22,10 @@ function SideNavController($mdSidenav, $scope, $SideNavService, $advertService) 
         self.navigationService.previous();
     };
 
+    self.onSelectTabAdd = function(tab) {
+        self.advertService.advertSelected = self.advertService.createAdvertEmpty();
+    }
+
     self.addAdvert = function(event) {
         self.advertService.advertSelected = self.advertService.createAdvertEmpty();
         self.navigationService.addAdvert();

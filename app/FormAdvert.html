@@ -6,7 +6,7 @@
     
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-font-library="material-icons" class="person">person</md-icon>
-                    <input ng-model="app.data.name.first" type="text" id="person" placeholder="Firstname" ng-required="true">
+                    <input ng-model="app.data.name.first" type="text" placeholder="Firstname" ng-required="true">
                 </md-input-container>
     
                 <md-input-container class="md-icon-float md-block" flex-gt-sm>
@@ -38,7 +38,7 @@
     
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-font-library="material-icons" class="address" style="display:inline-block;">place</md-icon>
-                    <input ng-model="app.data.address.street" type="text" class="address" placeholder="Address" ng-required="true">
+                    <input ng-model="app.data.address.street" type="text" placeholder="Address" ng-required="true">
                 </md-input-container>
     
                 <md-input-container class="md-icon-float md-block" flex-gt-sm>
@@ -51,8 +51,8 @@
         </div>
         <div id="content">
 
-            <md-input-container md-no-float class="md-block">
-                <textarea ng-model="app.data.description" type="text" class="description" placeholder="Description" ng-required="true" rows="3"></textarea>
+            <md-input-container class="md-block">
+                <textarea ng-model="app.data.description" type="text" placeholder="Description" ng-required="true" rows="2"></textarea>
             </md-input-container>
         
         </div>
