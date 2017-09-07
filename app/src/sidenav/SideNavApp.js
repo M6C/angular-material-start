@@ -20,11 +20,21 @@ import AdvertForm from 'src/advert/components/form/AdvertForm';
 
 import UserCardDirective from 'src/user/components/directive/UserCardDirective';
 
+// Translate i80 - https://cdnjs.com/libraries/angular-translate
+import Translate from 'https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.2/angular-translate.js';
+// import TranslateHandlerLog from 'https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.2/angular-translate-handler-log/angular-translate-handler-log.js';
+
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-var myApp = angular.module('SideNav', ['ngMaterial'/*, 'cl.paging'*//*, 'ui.bootstrap'*/]);
+var myApp = angular.module('SideNav', [
+    'ngMaterial'
+    , Translate
+    /*, 'pascalprecht.translate'*/
+    /*, 'cl.paging'*/
+    /*, 'ui.bootstrap'*/
+]);
 
-myApp.config(($mdIconProvider, $mdThemingProvider) => {
+myApp.config(($mdIconProvider, $mdThemingProvider, $translateProvider) => {
     $mdThemingProvider.theme('default')
         // .primaryPalette('pink')
         // .accentPalette('orange')
@@ -35,6 +45,14 @@ myApp.config(($mdIconProvider, $mdThemingProvider) => {
         .icon("menu", "./assets/svg/menu.svg", 24)
         .icon("blank", "./assets/svg/blank.svg", 24)
     ;
+
+    $translateProvider.translations('en', {
+        ADVERT_FORM_SEARCH_INPUT: 'What is your favorite US state?'
+    });
+    $translateProvider.translations('fr', {
+        ADVERT_FORM_SEARCH_INPUT: 'Rechercher une annonce'
+    });
+    $translateProvider.preferredLanguage('fr');
 });
 
 myApp.service('SideNavService', SideNavService);
