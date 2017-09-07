@@ -24,10 +24,8 @@
 
   <md-content flex layout="column">
       <md-toolbar layout="row" class="md-accent">
-        <md-button class="menu md-icon-button" ng-click="app.toggleList()" aria-label="Show User List">
-          <md-icon md-svg-icon="menu"></md-icon>
-        </md-button>
-    	<md-tabs ng-if="false" flex layout="column" md-selected="app.navigationService.data.selectedIndex" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
+        <home-button-toolbar selected-index="app.navigationService.data.selectedIndex"></home-button-toolbar>
+        <md-tabs ng-if="false" flex layout="column" md-selected="app.navigationService.data.selectedIndex" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
           <md-tab id="tab1">
             <md-tab-label>Item One</md-tab-label>
           </md-tab>

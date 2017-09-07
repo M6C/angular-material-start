@@ -14,6 +14,7 @@ import SideNavController from 'src/sidenav/components/controller/SideNavControll
 import FormController from 'src/search/components/controller/FormController';
 import FormAdvertController from 'src/advert/components/controller/FormAdvertController';
 
+import HomeButtonToolbar from 'src/advert/components/toolbar/HomeButtonToolbar';
 import AdvertList from 'src/advert/components/list/AdvertList';
 import AdvertForm from 'src/advert/components/form/AdvertForm';
 
@@ -43,6 +44,7 @@ myApp.controller('SideNavController', SideNavController);
 myApp.controller('FormController', FormController);
 myApp.controller('FormAdvertController', FormAdvertController);
 
+myApp.component(HomeButtonToolbar.name, HomeButtonToolbar.config)
 myApp.component(AdvertList.name, AdvertList.config);
 myApp.component(AdvertForm.name, AdvertForm.config);
 myApp.component(Pagination.name, Pagination.config)

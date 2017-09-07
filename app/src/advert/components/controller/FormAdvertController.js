@@ -7,12 +7,19 @@ function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertServic
 
     self.data = angular.copy($advertService.advertSelected);
 
-    self.submitAdvert = function(event) {
-        $advertService.addAdvert(this.data);
-        $sideNavService.seachAdvert();
+    self.init = function(form) {
+        if (!form.$valid) {
+            // ToDo : Set Focus on 1st field not valid each time component is displayed
+
+            // angular.element("[name='" + form.$name + "']").find('.ng-invalid:visible:first').focus();
+            // angular.element().find('.ng-invalid:visible:first').focus();
+            // angular.element().find(':visible:first').focus();
+            // return false;
+        }
     }
 
-    self.back = function(event) {
+    self.submitAdvert = function(event) {
+        $advertService.addAdvert(this.data);
         $sideNavService.seachAdvert();
     }
 }

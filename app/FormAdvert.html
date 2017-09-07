@@ -1,4 +1,4 @@
-<form name="form" ng-controller="FormAdvertController as app" layout="column" ng-submit="form.$valid && app.submitAdvert($event)">
+<form name="form" ng-controller="FormAdvertController as app" layout="column" ng-init="app.init({form:form})" ng-submit="form.$valid && app.submitAdvert($event)">
     <div class="formadvert">
         <div id="content">
 
@@ -6,7 +6,7 @@
     
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-font-library="material-icons" class="person">person</md-icon>
-                    <input ng-model="app.data.name.first" type="text" placeholder="Firstname" ng-required="true">
+                    <input ng-model="app.data.name.first" type="text" placeholder="Firstname" ng-required="true" autofocus>
                 </md-input-container>
     
                 <md-input-container class="md-icon-float md-block" flex-gt-sm>
@@ -58,12 +58,8 @@
         </div>
     </div>
 
-    <md-button type="submit" class="md-fab md-fab-bottom-right" aria-label="submit" ng-if="form.$valid">
+    <md-button type="submit" class="md-fab md-fab-bottom-right" aria-label="submit" ng-disabled="!form.$valid">
         <md-icon md-font-set="material-icons">send</md-icon>
-    </md-button>
-
-    <md-button type="button" class="md-fab md-fab-bottom-right" aria-label="back" ng-click="app.back()" ng-if="!form.$valid">
-        <md-icon md-font-set="material-icons">arrow_back</md-icon>
     </md-button>
 
 </form>

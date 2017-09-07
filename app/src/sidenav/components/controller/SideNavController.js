@@ -14,6 +14,10 @@ function SideNavController($mdSidenav, $scope, $SideNavService, $advertService) 
         $mdSidenav('left').toggle();
     };
 
+    self.back = function(event) {
+        $SideNavService.seachAdvert();
+    }
+
     self.next = function() {
         self.navigationService.next();
     };
