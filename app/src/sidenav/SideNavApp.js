@@ -47,10 +47,24 @@ myApp.config(($mdIconProvider, $mdThemingProvider, $translateProvider) => {
     ;
 
     $translateProvider.translations('en', {
-        ADVERT_FORM_SEARCH_INPUT: 'What is your favorite US state?'
+        ADVERT_FORM_SEARCH_INPUT: 'What is your favorite US state?',
+        ADVERT_FORM_CREATE_FIRSTNAME: 'Firstname',
+        ADVERT_FORM_CREATE_LASTNAME: 'Lastname',
+        ADVERT_FORM_CREATE_EMAIL: 'Email',
+        ADVERT_FORM_CREATE_PHONE_NUMBER: 'Phone Number',
+        ADVERT_FORM_CREATE_ADDRESS: 'Address',
+        ADVERT_FORM_CREATE_CITY: 'City',
+        ADVERT_FORM_CREATE_DESCRIPTION: 'Description'
     });
     $translateProvider.translations('fr', {
-        ADVERT_FORM_SEARCH_INPUT: 'Rechercher une annonce'
+        ADVERT_FORM_SEARCH_INPUT: 'Rechercher une annonce',
+        ADVERT_FORM_CREATE_FIRSTNAME: 'Prenom',
+        ADVERT_FORM_CREATE_LASTNAME: 'Nom',
+        ADVERT_FORM_CREATE_EMAIL: 'Email',
+        ADVERT_FORM_CREATE_PHONE_NUMBER: 'Telephone',
+        ADVERT_FORM_CREATE_ADDRESS: 'Adresse/Arrondissement/Quartier',
+        ADVERT_FORM_CREATE_CITY: 'Ville',
+        ADVERT_FORM_CREATE_DESCRIPTION: 'Annonce'
     });
     $translateProvider.preferredLanguage('fr');
 });

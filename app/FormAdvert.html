@@ -6,12 +6,12 @@
     
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-font-library="material-icons" class="person">person</md-icon>
-                    <input ng-model="app.data.name.first" type="text" placeholder="Firstname" ng-required="true" autofocus>
+                    <input ng-model="app.data.name.first" type="text" placeholder="{{'ADVERT_FORM_CREATE_FIRSTNAME' | translate}}" ng-required="true" autofocus>
                 </md-input-container>
     
                 <md-input-container class="md-icon-float md-block" flex-gt-sm>
                     <md-icon md-svg-icon="blank"></md-icon>
-                    <input ng-model="app.data.name.last" type="text" placeholder="Lastname" ng-required="true">
+                    <input ng-model="app.data.name.last" type="text" placeholder="{{'ADVERT_FORM_CREATE_LASTNAME' | translate}}" ng-required="true">
                 </md-input-container>
     
             </div>
@@ -21,12 +21,12 @@
                 <md-input-container class="md-block" flex-gt-sm>
                   <!-- Use floating placeholder instead of label -->
                   <md-icon md-font-library="material-icons" class="email">email</md-icon>
-                  <input ng-model="app.data.email" type="email" placeholder="Email" ng-required="true">
+                  <input ng-model="app.data.email" type="email" placeholder="{{'ADVERT_FORM_CREATE_EMAIL' | translate}}" ng-required="true">
                 </md-input-container>
     
                 <md-input-container class="md-icon-float md-block" flex-gt-sm>
                   <md-icon md-font-library="material-icons" class="phone">phone</md-icon>
-                  <input ng-model="app.data.phone" type="text" placeholder="Phone Number">
+                  <input ng-model="app.data.phone" type="text" placeholder="{{'ADVERT_FORM_CREATE_PHONE_NUMBER' | translate}}">
                 </md-input-container>
     
             </div>
@@ -38,12 +38,12 @@
     
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-font-library="material-icons" class="address" style="display:inline-block;">place</md-icon>
-                    <input ng-model="app.data.address.street" type="text" placeholder="Address" ng-required="true">
+                    <input ng-model="app.data.address.street" type="text" placeholder="{{'ADVERT_FORM_CREATE_ADDRESS' | translate}}" ng-required="true">
                 </md-input-container>
     
                 <md-input-container class="md-icon-float md-block" flex-gt-sm>
                     <md-icon md-svg-icon="blank"></md-icon>
-                    <input ng-model="app.data.address.city" type="text" placeholder="City" ng-required="true">
+                    <input ng-model="app.data.address.city" type="text" placeholder="{{'ADVERT_FORM_CREATE_CITY' | translate}}" ng-required="true">
                 </md-input-container>
     
             </div>
@@ -52,7 +52,7 @@
         <div id="content">
 
             <md-input-container class="md-block">
-                <textarea ng-model="app.data.description" type="text" placeholder="Description" ng-required="true" rows="2"></textarea>
+                <textarea ng-model="app.data.description" type="text" placeholder="{{'ADVERT_FORM_CREATE_DESCRIPTION' | translate}}" ng-required="true" rows="2"></textarea>
             </md-input-container>
         
         </div>
