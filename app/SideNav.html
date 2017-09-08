@@ -27,13 +27,13 @@
         <home-button-toolbar selected-index="app.navigationService.data.selectedIndex"></home-button-toolbar>
         <md-tabs ng-if="false" flex layout="column" md-selected="app.navigationService.data.selectedIndex" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
           <md-tab id="tab1">
-            <md-tab-label>Item One</md-tab-label>
+            <md-tab-label>{{'SIDENAV_TOOLBAR_TAB_LINK' | translate}}</md-tab-label>
           </md-tab>
           <md-tab id="tab2">
-            <md-tab-label>SEARCH</md-tab-label>
+            <md-tab-label>{{'SIDENAV_TOOLBAR_TAB_SEARCH' | translate}}</md-tab-label>
           </md-tab>
           <md-tab id="tab3" md-on-select="app.onSelectTabAdd(tab)">
-            <md-tab-label>ADD</md-tab-label>
+            <md-tab-label>{{'SIDENAV_TOOLBAR_TAB_ADD' | translate}}</md-tab-label>
           </md-tab>
         </md-tabs>
       </md-toolbar>
@@ -55,12 +55,16 @@
   </md-content>
 
     <!-- http://v4-alpha.getbootstrap.com/getting-started/introduction/ -->
+<!--
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+-->
 
   <script src="./jspm_packages/system.js" type="text/javascript"></script>
   <script src="config.js" type="text/javascript"></script>
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>-->
+
   <script type="text/javascript">
     System
         .import('src/sidenav')

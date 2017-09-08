@@ -1,9 +1,19 @@
 // Load libraries
 import angular from 'angular';
 
+// jspm install
 import 'angular-animate';
 import 'angular-aria';
 import 'angular-material';
+// jspm install angular-cookies
+import 'angular-cookies';
+
+// Translate i80 - https://cdnjs.com/libraries/angular-translate
+// jspm install angular-translate angular-translate-storage-cookie angular-translate-loader-static-files angular-translate-storage-local
+import 'angular-translate';
+import 'angular-translate-storage-cookie';
+import 'angular-translate-loader-static-files';
+import 'angular-translate-storage-local';
 
 import Pagination from 'src/pagination/components/index';
 
@@ -20,19 +30,23 @@ import AdvertForm from 'src/advert/components/form/AdvertForm';
 
 import UserCardDirective from 'src/user/components/directive/UserCardDirective';
 
-// Translate i80 - https://cdnjs.com/libraries/angular-translate
-import Translate from 'https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.2/angular-translate.js';
-// import TranslateHandlerLog from 'https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.2/angular-translate-handler-log/angular-translate-handler-log.js';
-
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 var myApp = angular.module('SideNav', [
     'ngMaterial'
-    , Translate
-    /*, 'pascalprecht.translate'*/
+    , 'ngCookies'
+    , 'pascalprecht.translate'
     /*, 'cl.paging'*/
     /*, 'ui.bootstrap'*/
 ]);
+
+// myApp.constant('LOCALES', {
+//     'locales': {
+//         'fr_FR': 'Français',
+//         'en_US': 'English'
+//     },
+//     'preferredLocale': 'fr_FR'
+// });
 
 myApp.config(($mdIconProvider, $mdThemingProvider, $translateProvider) => {
     $mdThemingProvider.theme('default')
@@ -46,27 +60,14 @@ myApp.config(($mdIconProvider, $mdThemingProvider, $translateProvider) => {
         .icon("blank", "./assets/svg/blank.svg", 24)
     ;
 
-    $translateProvider.translations('en', {
-        ADVERT_FORM_SEARCH_INPUT: 'What is your favorite US state?',
-        ADVERT_FORM_CREATE_FIRSTNAME: 'Firstname',
-        ADVERT_FORM_CREATE_LASTNAME: 'Lastname',
-        ADVERT_FORM_CREATE_EMAIL: 'Email',
-        ADVERT_FORM_CREATE_PHONE_NUMBER: 'Phone Number',
-        ADVERT_FORM_CREATE_ADDRESS: 'Address',
-        ADVERT_FORM_CREATE_CITY: 'City',
-        ADVERT_FORM_CREATE_DESCRIPTION: 'Description'
+    $translateProvider.useMissingTranslationHandlerLog();
+
+    $translateProvider.useStaticFilesLoader({
+        prefix: 'assets/i80/locale-',// path to translations files
+        suffix: '.json'// suffix, currently- extension of the translations
     });
-    $translateProvider.translations('fr', {
-        ADVERT_FORM_SEARCH_INPUT: 'Rechercher une annonce',
-        ADVERT_FORM_CREATE_FIRSTNAME: 'Prenom',
-        ADVERT_FORM_CREATE_LASTNAME: 'Nom',
-        ADVERT_FORM_CREATE_EMAIL: 'Email',
-        ADVERT_FORM_CREATE_PHONE_NUMBER: 'Telephone',
-        ADVERT_FORM_CREATE_ADDRESS: 'Adresse/Arrondissement/Quartier',
-        ADVERT_FORM_CREATE_CITY: 'Ville',
-        ADVERT_FORM_CREATE_DESCRIPTION: 'Annonce'
-    });
-    $translateProvider.preferredLanguage('fr');
+    $translateProvider.preferredLanguage('fr_FR');// is applied on first load
+    $translateProvider.useLocalStorage();// saves selected language to localStorage
 });
 
 myApp.service('SideNavService', SideNavService);
