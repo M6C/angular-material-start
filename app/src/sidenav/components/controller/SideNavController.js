@@ -18,6 +18,11 @@ function SideNavController($mdSidenav, $scope, $SideNavService, $advertService) 
         $SideNavService.seachAdvert();
     }
 
+    self.link = function(event) {
+        $SideNavService.link();
+        $mdSidenav('left').toggle();
+    }
+
     self.next = function() {
         self.navigationService.next();
     };

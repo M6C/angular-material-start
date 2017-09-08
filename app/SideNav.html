@@ -19,6 +19,7 @@
 <body ng-cloak layout="row" ng-controller="SideNavController as app" class="tabsdemoStaticTabs">
   <md-sidenav layout="column" class="md-whiteframe-4dp sidenav1" md-component-id="left" md-is-locked-open="false">
     <user-card name="User name"></user-card>
+    <md-button class="md-primary" ng-click="app.link()">{{'SIDENAV_TOOLBAR_TAB_LINK' | translate}}</md-button>
     <md-button class="md-primary" href="index.html">SideNav</md-button>
   </md-sidenav>
 

@@ -1,6 +1,6 @@
 <md-button class="menu md-icon-button" ng-click="$ctrl.toggleList()" aria-label="Show User List" ng-if="$ctrl.selectedIndex == 1">
   <md-icon md-svg-icon="menu"></md-icon>
 </md-button>
-<md-button class="menu md-icon-button" ng-click="$ctrl.back()" aria-label="Back" ng-if="$ctrl.selectedIndex == 2">
+<md-button class="menu md-icon-button" ng-click="$ctrl.back()" aria-label="Back" ng-if="($ctrl.selectedIndex == 0) || ($ctrl.selectedIndex == 2)">
     <md-icon md-font-set="material-icons">arrow_back</md-icon>
 </md-button>

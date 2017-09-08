@@ -33,6 +33,12 @@ var self = this;
         };
     }
 
+    self.link = function() {
+        self.data = {
+            selectedIndex: 0
+        };
+    }
+
   // Promise-based API
   return self;
 }
