@@ -112,9 +112,6 @@ md-card.userCard {
 }
 .userCard .card-media md-icon {
   color: rgba(255, 255, 255, 0.87);
-/*
-  background-color: red;
-*/
 }
 .userCard span.card-title {
   padding-left: 15px;
@@ -131,4 +128,22 @@ md-card.userCard {
   margin: 30px;
   padding: 5px;
   background-color: rgba(205, 205, 205, 0.45);
+}
+
+.advert-form {
+    height:100px;
+}
+
+md-autocomplete input:not(.md-input) {
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 16px;
+    line-height: 34px;
+    font-family: arial, sans-serif;
+    line-height: 34px;
+    color: #666;
 }

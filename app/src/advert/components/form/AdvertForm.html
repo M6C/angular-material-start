@@ -1,5 +1,5 @@
-<form ng-submit="$event.preventDefault()">
-    <md-autocomplete
+<form ng-submit="$event.preventDefault()" class="advert-form" layout="row" layout-align="center center">
+    <md-autocomplete flex="75" class="advert-form-input"
         ng-disabled="$ctrl.isDisabled"
         md-no-cache="$ctrl.noCache"
         md-search-text-change="$ctrl.searchTextChange($ctrl.searchText)"
@@ -8,7 +8,7 @@
         md-selected-item="$ctrl.selectedItem"
         md-search-text="$ctrl.searchText"
         md-item-text="item.display"
-        md-min-length="1"
+        md-min-length="2"
         placeholder="{{'ADVERT_FORM_SEARCH_INPUT' | translate}}">
         <md-item-template>
             <span md-highlight-text="$ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
@@ -18,8 +18,9 @@
             <a ng-click="$ctrl.newState($ctrl.searchText)">Create a new one!</a>
         </md-not-found>
     </md-autocomplete>
-    <br/>
-    <md-checkbox ng-model="$ctrl.simulateQuery">Simulate query for results?</md-checkbox>
-    <md-checkbox ng-model="$ctrl.noCache">Disable caching of queries?</md-checkbox>
-    <md-checkbox ng-model="$ctrl.isDisabled">Disable the input?</md-checkbox>
+    <md-input-container ng-if="false" class="md-block" flex-gt-sm>
+        <md-checkbox ng-model="$ctrl.simulateQuery">Simulate query for results?</md-checkbox>
+        <md-checkbox ng-model="$ctrl.noCache">Disable caching of queries?</md-checkbox>
+        <md-checkbox ng-model="$ctrl.isDisabled">Disable the input?</md-checkbox>
+    </md-input-container>
 </form>
