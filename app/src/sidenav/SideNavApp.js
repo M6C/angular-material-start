@@ -48,7 +48,7 @@ var myApp = angular.module('SideNav', [
 //     'preferredLocale': 'fr_FR'
 // });
 
-myApp.config(($mdIconProvider, $mdThemingProvider, $translateProvider) => {
+myApp.config(($mdIconProvider, $mdThemingProvider) => {
     $mdThemingProvider.theme('default')
         // .primaryPalette('pink')
         // .accentPalette('orange')
@@ -59,7 +59,9 @@ myApp.config(($mdIconProvider, $mdThemingProvider, $translateProvider) => {
         .icon("menu", "./assets/svg/menu.svg", 24)
         .icon("blank", "./assets/svg/blank.svg", 24)
     ;
+});
 
+myApp.config(($translateProvider) => {
     $translateProvider.useMissingTranslationHandlerLog();
 
     $translateProvider.useStaticFilesLoader({
