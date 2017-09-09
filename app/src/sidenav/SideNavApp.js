@@ -27,6 +27,7 @@ import FormAdvertController from 'src/advert/components/controller/FormAdvertCon
 import HomeButtonToolbar from 'src/advert/components/toolbar/HomeButtonToolbar';
 import AdvertList from 'src/advert/components/list/AdvertList';
 import AdvertForm from 'src/advert/components/form/AdvertForm';
+import ChildIcon from 'src/advert/components/icon/ChildIcon';
 
 import UserCardDirective from 'src/user/components/directive/UserCardDirective';
 
@@ -48,11 +49,14 @@ var myApp = angular.module('SideNav', [
 //     'preferredLocale': 'fr_FR'
 // });
 
-myApp.config(($mdIconProvider, $mdThemingProvider) => {
+myApp.config(($mdThemingProvider) => {
     $mdThemingProvider.theme('default')
         // .primaryPalette('pink')
         // .accentPalette('orange')
     ;
+});
+
+myApp.config(($mdIconProvider) => {
 
     // Register icons
     $mdIconProvider
@@ -83,6 +87,7 @@ myApp.component(HomeButtonToolbar.name, HomeButtonToolbar.config)
 myApp.component(AdvertList.name, AdvertList.config);
 myApp.component(AdvertForm.name, AdvertForm.config);
 myApp.component(Pagination.name, Pagination.config)
+myApp.component(ChildIcon.name, ChildIcon.config)
 
 myApp.directive('userCard', UserCardDirective);
 
