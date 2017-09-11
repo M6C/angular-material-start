@@ -8,6 +8,10 @@ import 'angular-material';
 // jspm install angular-cookies
 import 'angular-cookies';
 
+// import * as moment from 'npm:moment@2.18.1/moment';
+// import moment from 'moment';
+import 'mdPickers';
+
 // Translate i80 - https://cdnjs.com/libraries/angular-translate
 // jspm install angular-translate angular-translate-storage-cookie angular-translate-loader-static-files angular-translate-storage-local
 import 'angular-translate';
@@ -37,6 +41,7 @@ var myApp = angular.module('SideNav', [
     'ngMaterial'
     , 'ngCookies'
     , 'pascalprecht.translate'
+    , 'mdPickers'
     /*, 'cl.paging'*/
     /*, 'ui.bootstrap'*/
 ]);

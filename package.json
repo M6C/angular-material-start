@@ -23,6 +23,8 @@
       "angular-translate-storage-local": "github:angular-translate/bower-angular-translate-storage-local@^2.15.2",
       "css": "github:systemjs/plugin-css@^0.1.20",
       "json": "github:systemjs/plugin-json@^0.1.0",
+      "mdPickers": "npm:mdPickers@^0.7.5",
+      "moment": "npm:moment@^2.18.1",
       "text": "github:systemjs/plugin-text@^0.0.4"
     },
     "devDependencies": {
@@ -42,7 +44,9 @@
   "dependencies": {
     "@angular/common": "^4.3.6",
     "@angular/core": "^4.3.6",
-    "@angular/forms": "^4.3.6",
-    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.2"
+    "@angular/forms": "^4.4.0-RC.0",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.2",
+    "mdPickers": "^0.7.5",
+    "moment": "^2.18.1"
   }
 }
