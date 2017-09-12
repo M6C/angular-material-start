@@ -3,10 +3,10 @@
         <div id="content">
 
             <div layout-gt-sm="row">
-    
+
                 <md-input-container class="md-block" flex-gt-sm>
-                    <mdp-date-picker mdp-placeholder="Date" ng-model="app.data.birthday"></mdp-date-picker>
-                    <!--<mdp-date-picker mdp-open-on-click required name="dateFormat" mdp-placeholder="My date(dd/mm/yyyy)" mdp-format="DD/MM/YYYY" ng-model="app.data.birthday"></mdp-date-picker>-->
+                    <mdp-date-picker mdp-open-on-click required id="birthday" ng-class="md-block md-icon-left md-icon-float flex-gt-sm md-input-invalid" ng-model="add.data.birthday" mdp-placeholder="{{'ADVERT_FORM_CREATE_BIRTHDAY' | translate}}" mdp-format="DD/MM/YYYY">
+                    </mdp-date-picker>
                 </md-input-container>
 
             </div>

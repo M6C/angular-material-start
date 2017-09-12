@@ -9,5 +9,6 @@
     "ADVERT_FORM_CREATE_PHONE_NUMBER": "Telephone",
     "ADVERT_FORM_CREATE_ADDRESS": "Adresse/Arrondissement/Quartier",
     "ADVERT_FORM_CREATE_CITY": "Ville",
-    "ADVERT_FORM_CREATE_DESCRIPTION": "Annonce"
+    "ADVERT_FORM_CREATE_DESCRIPTION": "Annonce",
+    "ADVERT_FORM_CREATE_BIRTHDAY": "Date de naissance"
 }
