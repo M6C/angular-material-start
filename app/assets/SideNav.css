@@ -48,7 +48,7 @@ md-content {
   overflow: hidden;
 }
 
-md-toolbar {
+md-toolbar.side-nav-toolbar {
   min-height: 48px;
   max-height: 48px;
   height: 48px;

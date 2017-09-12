@@ -11,10 +11,13 @@
   <link rel="stylesheet" href="./jspm_packages/github/angular/bower-material@master/angular-material.css"/>
   <link rel="stylesheet" href="./jspm_packages/github/dpoetzsch/md-pickers@1.1.0/dist/mdPickers.css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<!--
+-->  <!-- http://v4-alpha.getbootstrap.com/getting-started/introduction/ -->
   <link rel="stylesheet" href="./assets/SideNav.css"/>
   <link rel="stylesheet" href="./assets/FormAdvert.css"/>
-  <!-- http://v4-alpha.getbootstrap.com/getting-started/introduction/ -->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
 </head>
 
 <body ng-cloak layout="row" ng-controller="SideNavController as app" class="tabsdemoStaticTabs">
@@ -25,7 +28,7 @@
   </md-sidenav>
 
   <md-content flex layout="column">
-      <md-toolbar layout="row" class="md-accent">
+      <md-toolbar layout="row" class="md-accent side-nav-toolbar">
         <home-button-toolbar selected-index="app.navigationService.data.selectedIndex"></home-button-toolbar>
         <md-tabs ng-if="false" flex layout="column" md-selected="app.navigationService.data.selectedIndex" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
           <md-tab id="tab1">
