@@ -10,7 +10,7 @@ import 'angular-cookies';
 
 // import * as moment from 'npm:moment@2.18.1/moment';
 // import moment from 'moment';
-import 'mdPickers';
+import 'github:dpoetzsch/md-pickers@1.1.0';
 
 // Translate i80 - https://cdnjs.com/libraries/angular-translate
 // jspm install angular-translate angular-translate-storage-cookie angular-translate-loader-static-files angular-translate-storage-local
