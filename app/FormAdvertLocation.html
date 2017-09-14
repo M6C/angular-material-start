@@ -1,0 +1,13 @@
+<div layout-gt-sm="row">
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <md-icon md-font-library="material-icons" class="address" style="display:inline-block;">place</md-icon>
+        <input ng-model="app.data.address.street" type="text" placeholder="{{'ADVERT_FORM_CREATE_ADDRESS' | translate}}" ng-required="true">
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block" flex-gt-sm>
+        <md-icon md-svg-icon="blank"></md-icon>
+        <input ng-model="app.data.address.city" type="text" placeholder="{{'ADVERT_FORM_CREATE_CITY' | translate}}" ng-required="true">
+    </md-input-container>
+
+</div>

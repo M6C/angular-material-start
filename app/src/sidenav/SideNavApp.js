@@ -32,6 +32,7 @@ import HomeButtonToolbar from 'src/advert/components/toolbar/HomeButtonToolbar';
 import AdvertList from 'src/advert/components/list/AdvertList';
 import AdvertForm from 'src/advert/components/form/AdvertForm';
 import ChildIcon from 'src/advert/components/icon/ChildIcon';
+import Citation from 'src/advert/components/citation/Citation';
 
 import UserCardDirective from 'src/user/components/directive/UserCardDirective';
 
@@ -93,6 +94,7 @@ myApp.component(AdvertList.name, AdvertList.config);
 myApp.component(AdvertForm.name, AdvertForm.config);
 myApp.component(Pagination.name, Pagination.config)
 myApp.component(ChildIcon.name, ChildIcon.config)
+myApp.component(Citation.name, Citation.config)
 
 myApp.directive('userCard', UserCardDirective);
 

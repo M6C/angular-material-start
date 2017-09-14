@@ -1,77 +1,65 @@
-<form name="form" ng-controller="FormAdvertController as app" layout="column" ng-init="app.init({form:form})" ng-submit="form.$valid && app.submitAdvert($event)">
-    <div class="formadvert">
+<form name="form" ng-controller="FormAdvertController as app" layout="column" ng-submit="form.$valid && app.submitAdvert($event)">
+
+    <md-content class="formadvert">
         <div id="content">
-
-            <div layout-gt-sm="row">
-
-                <md-input-container class="md-block" flex-gt-sm>
-                    <mdp-date-picker mdp-open-on-click required id="birthday" ng-model="add.data.birthday" mdp-placeholder="{{'ADVERT_FORM_CREATE_BIRTHDAY' | translate}}" mdp-format="DD/MM/YYYY">
-                    </mdp-date-picker>
-                </md-input-container>
-
-            </div>
-
+            <md-tabs flex md-selected="app.selectedFormIndex" layout="column" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
+                <md-tab id="form1">
+                    <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_CHILD' | translate}}</md-tab-label>
+                </md-tab>
+                <md-tab id="form2">
+                    <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_CONTACT' | translate}}</md-tab-label>
+                </md-tab>
+                <md-tab id="form3">
+                    <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_LOCATION' | translate}}</md-tab-label>
+                </md-tab>
+                <md-tab id="form4">
+                    <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_DESCRIPTION' | translate}}</md-tab-label>
+                </md-tab>
+            </md-tabs>
+            <ng-switch on="app.selectedFormIndex" class="tabpanelform-container">
+                <div class="md-padding switch-show-hide" role="tabpanelform" id="form1-content" aria-labelledby="form1" ng-switch-when="0">
+                    <citation index="app.selectedFormIndex"></citation>
+                    <div ng-include="'FormAdvertChild.html'"></div>
+                </div>
+                <div class="md-padding switch-show-hide" role="tabpanelform" id="form2-content" aria-labelledby="form2" ng-switch-when="1">
+                    <citation index="app.selectedFormIndex"></citation>
+                    <div ng-include="'FormAdvertContact.html'"></div>
+                </div>
+                <div class="md-padding switch-show-hide" role="tabpanelform" id="form3-content" aria-labelledby="form3" ng-switch-when="2">
+                    <citation index="app.selectedFormIndex"></citation>
+                    <div ng-include="'FormAdvertLocation.html'"></div>
+                </div>
+                <div class="md-padding switch-show-hide" role="tabpanelform" id="form4-content" aria-labelledby="form4" ng-switch-when="3">
+                    <citation index="app.selectedFormIndex"></citation>
+                    <div ng-include="'FormAdvertDescription.html'"></div>
+                </div>
+            </ng-switch>
         </div>
-        <div id="content">
-
-            <div layout-gt-sm="row">
-    
-                <md-input-container class="md-block" flex-gt-sm>
-                    <md-icon md-font-library="material-icons" class="person">person</md-icon>
-                    <input ng-model="app.data.name.first" type="text" placeholder="{{'ADVERT_FORM_CREATE_FIRSTNAME' | translate}}" ng-required="true" autofocus>
-                </md-input-container>
-    
-                <md-input-container class="md-icon-float md-block" flex-gt-sm>
-                    <md-icon md-svg-icon="blank"></md-icon>
-                    <input ng-model="app.data.name.last" type="text" placeholder="{{'ADVERT_FORM_CREATE_LASTNAME' | translate}}" ng-required="true">
-                </md-input-container>
-    
-            </div>
-    
-            <div layout-gt-sm="row">
-    
-                <md-input-container class="md-block" flex-gt-sm>
-                  <!-- Use floating placeholder instead of label -->
-                  <md-icon md-font-library="material-icons" class="email">email</md-icon>
-                  <input ng-model="app.data.email" type="email" placeholder="{{'ADVERT_FORM_CREATE_EMAIL' | translate}}" ng-required="true">
-                </md-input-container>
-    
-                <md-input-container class="md-icon-float md-block" flex-gt-sm>
-                  <md-icon md-font-library="material-icons" class="phone">phone</md-icon>
-                  <input ng-model="app.data.phone" type="text" placeholder="{{'ADVERT_FORM_CREATE_PHONE_NUMBER' | translate}}">
-                </md-input-container>
-    
-            </div>
-
-        </div>
-        <div id="content">
-    
-            <div layout-gt-sm="row">
-    
-                <md-input-container class="md-block" flex-gt-sm>
-                    <md-icon md-font-library="material-icons" class="address" style="display:inline-block;">place</md-icon>
-                    <input ng-model="app.data.address.street" type="text" placeholder="{{'ADVERT_FORM_CREATE_ADDRESS' | translate}}" ng-required="true">
-                </md-input-container>
-    
-                <md-input-container class="md-icon-float md-block" flex-gt-sm>
-                    <md-icon md-svg-icon="blank"></md-icon>
-                    <input ng-model="app.data.address.city" type="text" placeholder="{{'ADVERT_FORM_CREATE_CITY' | translate}}" ng-required="true">
-                </md-input-container>
-    
-            </div>
-    
-        </div>
-        <div id="content">
-
-            <md-input-container class="md-block">
-                <textarea ng-model="app.data.description" type="text" placeholder="{{'ADVERT_FORM_CREATE_DESCRIPTION' | translate}}" ng-required="true" rows="2"></textarea>
-            </md-input-container>
-        
-        </div>
-    </div>
+    </md-content>
 
     <md-button type="submit" class="md-fab md-fab-bottom-right" aria-label="submit" ng-disabled="!form.$valid || !form.$dirty">
         <md-icon md-font-set="material-icons">send</md-icon>
     </md-button>
 
 </form>
+<!--
+<form name="form" ng-controller="FormAdvertController as app" layout="column" ng-submit="form.$valid && app.submitAdvert($event)">
+    <div class="formadvert">
+        <div id="content">
+            <div ng-include="'FormAdvertChild.html'"></div>
+        </div>
+        <div id="content">
+            <div ng-include="'FormAdvertContact.html'"></div>
+        </div>
+        <div id="content">
+            <div ng-include="'FormAdvertLocation.html'"></div>
+        </div>
+        <div id="content">
+            <div ng-include="'FormAdvertDescription.html'"></div>
+        </div>
+    </div>
+    <md-button type="submit" class="md-fab md-fab-bottom-right" aria-label="submit" ng-disabled="!form.$valid || !form.$dirty">
+        <md-icon md-font-set="material-icons">send</md-icon>
+    </md-button>
+</form>
+-->

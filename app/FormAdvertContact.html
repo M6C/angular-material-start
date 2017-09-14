@@ -1,0 +1,28 @@
+<div layout-gt-sm="row">
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <md-icon md-font-library="material-icons" class="person">person</md-icon>
+        <input ng-model="app.data.name.first" type="text" placeholder="{{'ADVERT_FORM_CREATE_FIRSTNAME' | translate}}" ng-required="true" autofocus>
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block" flex-gt-sm>
+        <md-icon md-svg-icon="blank"></md-icon>
+        <input ng-model="app.data.name.last" type="text" placeholder="{{'ADVERT_FORM_CREATE_LASTNAME' | translate}}" ng-required="true">
+    </md-input-container>
+
+</div>
+
+<div layout-gt-sm="row">
+
+    <md-input-container class="md-block" flex-gt-sm>
+      <!-- Use floating placeholder instead of label -->
+      <md-icon md-font-library="material-icons" class="email">email</md-icon>
+      <input ng-model="app.data.email" type="email" placeholder="{{'ADVERT_FORM_CREATE_EMAIL' | translate}}" ng-required="true">
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block" flex-gt-sm>
+      <md-icon md-font-library="material-icons" class="phone">phone</md-icon>
+      <input ng-model="app.data.phone" type="text" placeholder="{{'ADVERT_FORM_CREATE_PHONE_NUMBER' | translate}}">
+    </md-input-container>
+
+</div>
