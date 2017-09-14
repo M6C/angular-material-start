@@ -72,3 +72,25 @@
 .formadvert md-input-container input:not(:focus) {
     color: #666;
 }
+
+/**
+ * Citation
+ */
+.citation {
+    width: 100%;
+    text-align: center;
+}
+.citation-message {
+    font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+    font-size: 20px;
+    color: #777;
+}
+.citation-author {
+    font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+    font-size: 14px;
+    color: #777;
+    width: 100%;
+}
+.citation-quote {
+    color: #444;
+}

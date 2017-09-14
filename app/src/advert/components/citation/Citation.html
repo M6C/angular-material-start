@@ -1,6 +1,16 @@
-<h1><i class="icon-quote-right icon-4x"></i></h1>
-<p class="md-padding">
-    <h4>{{$ctrlCitation.getCitation().message}}</h4>
+<div layout="column" class="citation" layout-align="center center">
+<div layout="row">
+<div layout="row" layout-align="start start">
+    <i class="icon-quote-left icon-1x citation-quote"></i>
+</div>
+<p class="md-padding citation-message">
+    {{$ctrlCitation.getCitation().message}}
 </p>
-<h1><i class="material-icons">keyboard_arrow_right</i></h1>
-{{$ctrlCitation.getCitation().author}}
+<div layout="row" layout-align="end end">
+    <i class="icon-quote-right icon-1x citation-quote"></i>
+</div>
+</div>
+<div layout="row" layout-align="end end" class="citation-author">
+    {{$ctrlCitation.getCitation().author}}
+</div>
+</div>
