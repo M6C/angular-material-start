@@ -18,6 +18,7 @@ System.config({
     "angular-material": "github:angular/bower-material@master",
     "angular-messages": "github:angular/bower-angular-messages@1.6.6",
     "angular-mocks": "github:angular/bower-angular-mocks@1.5.8",
+    "angular-sanitize": "npm:angular-sanitize@1.6.6",
     "angular-translate": "github:angular-translate/bower-angular-translate@2.15.2",
     "angular-translate-loader-static-files": "github:angular-translate/bower-angular-translate-loader-static-files@2.15.2",
     "angular-translate-storage-cookie": "github:angular-translate/bower-angular-translate-storage-cookie@2.15.2",

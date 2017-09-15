@@ -1,8 +1,27 @@
-<form name="form" ng-controller="FormAdvertController as app" layout="column" ng-submit="form.$valid && app.submitAdvert($event)">
+<form name="form" ng-controller="FormAdvertController as app" layout="column" ng-submit="form.$valid && app.submitAdvert($event)" flex>
+    <md-content class="formadvert" layout="column" flex>
+    
+        <div id="citation" class="md-padding">
+            <ng-switch on="app.selectedFormIndex" class="tabpanelform-container">
+                <div class="md-padding switch-show-hide" role="tabpanelform" id="form1-content" aria-labelledby="form1" ng-switch-when="0">
+                    <citation index="app.selectedFormIndex"></citation>
+                </div>
+                <div class="md-padding switch-show-hide" role="tabpanelform" id="form2-content" aria-labelledby="form2" ng-switch-when="1">
+                    <citation index="app.selectedFormIndex"></citation>
+                </div>
+                <div class="md-padding switch-show-hide" role="tabpanelform" id="form3-content" aria-labelledby="form3" ng-switch-when="2">
+                    <citation index="app.selectedFormIndex"></citation>
+                </div>
+                <div class="md-padding switch-show-hide" role="tabpanelform" id="form4-content" aria-labelledby="form4" ng-switch-when="3">
+                    <citation index="app.selectedFormIndex"></citation>
+                </div>
+            </ng-switch>
+        </div>
+    
+        <md-divider></md-divider>
 
-    <md-content class="formadvert">
-        <div id="content">
-            <md-tabs flex md-selected="app.selectedFormIndex" layout="column" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
+        <div id="content" stype="height:100%" flex>
+            <md-tabs md-selected="app.selectedFormIndex" layout="column" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
                 <md-tab id="form1">
                     <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_CHILD' | translate}}</md-tab-label>
                 </md-tab>
@@ -16,21 +35,18 @@
                     <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_DESCRIPTION' | translate}}</md-tab-label>
                 </md-tab>
             </md-tabs>
+
             <ng-switch on="app.selectedFormIndex" class="tabpanelform-container">
-                <div class="md-padding switch-show-hide" role="tabpanelform" id="form1-content" aria-labelledby="form1" ng-switch-when="0">
-                    <citation index="app.selectedFormIndex"></citation>
+                <div class="switch-show-hide" role="tabpanelform" id="form1-content" aria-labelledby="form1" ng-switch-when="0">
                     <div ng-include="'FormAdvertChild.html'"></div>
                 </div>
-                <div class="md-padding switch-show-hide" role="tabpanelform" id="form2-content" aria-labelledby="form2" ng-switch-when="1">
-                    <citation index="app.selectedFormIndex"></citation>
+                <div class="switch-show-hide" role="tabpanelform" id="form2-content" aria-labelledby="form2" ng-switch-when="1">
                     <div ng-include="'FormAdvertContact.html'"></div>
                 </div>
-                <div class="md-padding switch-show-hide" role="tabpanelform" id="form3-content" aria-labelledby="form3" ng-switch-when="2">
-                    <citation index="app.selectedFormIndex"></citation>
+                <div class="switch-show-hide" role="tabpanelform" id="form3-content" aria-labelledby="form3" ng-switch-when="2">
                     <div ng-include="'FormAdvertLocation.html'"></div>
                 </div>
-                <div class="md-padding switch-show-hide" role="tabpanelform" id="form4-content" aria-labelledby="form4" ng-switch-when="3">
-                    <citation index="app.selectedFormIndex"></citation>
+                <div class="switch-show-hide" role="tabpanelform" id="form4-content" aria-labelledby="form4" ng-switch-when="3">
                     <div ng-include="'FormAdvertDescription.html'"></div>
                 </div>
             </ng-switch>

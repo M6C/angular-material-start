@@ -10,7 +10,7 @@ let component = {
             self.random = Math.random();
             self.citationList = [
                 [ // Enfance
-                    {message:'L\'enfance est une douce époque à laquelle on souhaite généralement revenir', author: ''},
+                    {message:'L\'enfance est une douce époque à laquelle on souhaite g&eacut;néralement revenir', author: ''},
                     {message:'Cette période de nos vies correspond à l\'éveil au monde et à sa propre conscience', author: ''}
                 ],
                 [ // Contact

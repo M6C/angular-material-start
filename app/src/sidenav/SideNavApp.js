@@ -11,6 +11,7 @@ import 'angular-cookies';
 // import * as moment from 'npm:moment@2.18.1/moment';
 // import moment from 'moment';
 import 'github:dpoetzsch/md-pickers@1.1.0';
+import 'npm:angular-sanitize@1.6.6/angular-sanitize';
 
 // Translate i80 - https://cdnjs.com/libraries/angular-translate
 // jspm install angular-translate angular-translate-storage-cookie angular-translate-loader-static-files angular-translate-storage-local
@@ -43,6 +44,7 @@ var myApp = angular.module('SideNav', [
     , 'ngCookies'
     , 'pascalprecht.translate'
     , 'mdPickers'
+    , 'ngSanitize'
     /*, 'cl.paging'*/
     /*, 'ui.bootstrap'*/
 ]);
@@ -80,6 +82,8 @@ myApp.config(($translateProvider) => {
     });
     $translateProvider.preferredLanguage('fr_FR');// is applied on first load
     $translateProvider.useLocalStorage();// saves selected language to localStorage
+
+    $translateProvider.useSanitizeValueStrategy('sanitize');
 });
 
 myApp.service('SideNavService', SideNavService);

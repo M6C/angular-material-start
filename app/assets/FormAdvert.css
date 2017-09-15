@@ -3,10 +3,10 @@
 }
 
 .formadvert #content {
-    border: 1px solid #dddddd;
-    border-radius: 20px;
+    /*border: 1px solid #dddddd;*/
+    /*border-radius: 20px;*/
     padding: 15px;
-    margin: 15px;
+    /*margin: 15px;*/
     background: white;
 }
 
@@ -74,6 +74,13 @@
 }
 
 /**
+ * Form Advert Citation
+ */
+.formadvert #citation {
+    height:100px;
+}
+
+/**
  * Citation
  */
 .citation {
@@ -82,11 +89,14 @@
 }
 .citation-message {
     font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+/*    font-family: "libesansweb-semicondensed",sans-serif;*/
     font-size: 20px;
     color: #777;
 }
 .citation-author {
-    font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+/*    font-family: museo-slab,Georgia,"Times New Roman",Times,serif;*/
+    font-family: "libesansweb-semicondensed",sans-serif;
+    font-weight: 600;
     font-size: 14px;
     color: #777;
     width: 100%;
