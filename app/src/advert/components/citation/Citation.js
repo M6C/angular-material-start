@@ -10,23 +10,23 @@ let component = {
             self.random = Math.random();
             self.citationList = [
                 [ // Enfance
-                    {message:'L\'enfance est une douce époque à laquelle on souhaite g&eacut;néralement revenir', author: ''},
-                    {message:'Cette période de nos vies correspond à l\'éveil au monde et à sa propre conscience', author: ''}
+                    {message:"CITATION_ENFANCE_01_MESSAGE", author: "CITATION_ENFANCE_01_AUTHOR"},
+                    {message:"CITATION_ENFANCE_02_MESSAGE", author: "CITATION_ENFANCE_02_AUTHOR"}
                 ],
                 [ // Contact
-                    {message:'Le contact humain est le véhicule essentiel de la démocratie', author: 'Jacques Chirac'},
-                    {message:'C\'est au contact d\'autrui que l\'homme apprend ce qu\'il sait.', author: 'Euripide'}
+                    {message:"CITATION_CONTACT_01_MESSAGE", author: "CITATION_CONTACT_01_AUTHOR"},
+                    {message:"CITATION_CONTACT_02_MESSAGE", author: "CITATION_CONTACT_02_AUTHOR"}
                 ],
                 [ // Adresse
-                    {message:'Pour rentrer chez vous, une seule adresse, la vôtre !', author:'Francis Blanche'},
-                    {message:'L\'adresse n?est autre chose qu?une juste dispensation des forces que l?on a.', author:'Francis Blanche'}
+                    {message:"CITATION_ADRESSE_01_MESSAGE", author: "CITATION_ADRESSE_01_AUTHOR"},
+                    {message:"CITATION_ADRESSE_02_MESSAGE", author: "CITATION_ADRESSE_02_AUTHOR"}
                 ],
                 [ // Annonce
-                    {message:'Le printemps s\'annonce toujours rempli de promesses... sans jamais nous mentir, sans jamais défaillir.', author:'Michel Bouthot'},
-                    {message:'Les petites annonces ont ceci de curieux que les meilleurs emplois se trouvent toujours dans les demandes.', author: ''}
+                    {message:"CITATION_ANNONCE_01_MESSAGE", author: "CITATION_ANNONCE_01_AUTHOR"},
+                    {message:"CITATION_ANNONCE_02_MESSAGE", author: "CITATION_ANNONCE_02_AUTHOR"}
                 ]
             ];
-        
+
             self.getCitation = function() {
                 let citation = self.citationList[self.index][Math.floor(self.random * 2)];
                 self.random = Math.random();

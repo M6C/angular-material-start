@@ -1,4 +1,11 @@
 {
+    "ENCODING_URL": "https://unicode-table.com/fr/#control-character",
+    "ENCODING_E_ACUTE": "è => \u00e8 https://unicode-table.com/fr/00E8/",
+    "ENCODING_E_GRAVE": "é => \u00e9 https://unicode-table.com/fr/00E9/",
+    "ENCODING_A_ACUTE": "à => \u00e0 https://unicode-table.com/fr/00E0/",
+    "ENCODING_A_CIRC" : "â => \u00e2 https://unicode-table.com/fr/00E2/",
+    "ENCODING_O_CIRC" : "ô => \u00f4 https://unicode-table.com/fr/00F4/",
+
     "SIDENAV_TOOLBAR_TAB_LINK": "LINK",
     "SIDENAV_TOOLBAR_TAB_SEARCH": "SEARCH",
     "SIDENAV_TOOLBAR_TAB_ADD": "ADD",
@@ -14,5 +21,22 @@
     "ADVERT_FORM_CREATE_TAB_CHILD": "Child",
     "ADVERT_FORM_CREATE_TAB_CONTACT": "Contact",
     "ADVERT_FORM_CREATE_TAB_LOCATION": "Address",
-    "ADVERT_FORM_CREATE_TAB_DESCRIPTION": "Advert"
+    "ADVERT_FORM_CREATE_TAB_DESCRIPTION": "Advert",
+
+    "CITATION_ENFANCE_01_MESSAGE": "",
+    "CITATION_ENFANCE_01_AUTHOR": "",
+    "CITATION_ENFANCE_02_MESSAGE": "",
+    "CITATION_ENFANCE_02_AUTHOR": "",
+    "CITATION_CONTACT_01_MESSAGE": "",
+    "CITATION_CONTACT_01_AUTHOR": "",
+    "CITATION_CONTACT_02_MESSAGE": "",
+    "CITATION_CONTACT_02_AUTHOR": "",
+    "CITATION_ADRESSE_01_MESSAGE": "",
+    "CITATION_ADRESSE_01_AUTHOR": "",
+    "CITATION_ADRESSE_02_MESSAGE": "",
+    "CITATION_ADRESSE_02_AUTHOR": "",
+    "CITATION_ANNONCE_01_MESSAGE": "",
+    "CITATION_ANNONCE_01_AUTHOR": "",
+    "CITATION_ANNONCE_02_MESSAGE": "",
+    "CITATION_ANNONCE_02_AUTHOR": ""
 }

@@ -80,10 +80,16 @@ myApp.config(($translateProvider) => {
         prefix: 'assets/i80/locale-',// path to translations files
         suffix: '.json'// suffix, currently- extension of the translations
     });
-    $translateProvider.preferredLanguage('fr_FR');// is applied on first load
+    // $translateProvider.preferredLanguage('fr_FR');// is applied on first load
+    $translateProvider.preferredLanguage('fr');// is applied on first load
     $translateProvider.useLocalStorage();// saves selected language to localStorage
 
-    $translateProvider.useSanitizeValueStrategy('sanitize');
+    // https://angular-translate.github.io/docs/#/api/pascalprecht.translate.$translateSanitizationProvider
+    // $translateProvider.useSanitizeValueStrategy('sanitize');
+    // here the html tag works
+    // $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
+    // $translateProvider.useSanitizeValueStrategy('escape');
+    $translateProvider.useSanitizeValueStrategy('escapeParameters');
 });
 
 myApp.service('SideNavService', SideNavService);
@@ -101,6 +107,12 @@ myApp.component(ChildIcon.name, ChildIcon.config)
 myApp.component(Citation.name, Citation.config)
 
 myApp.directive('userCard', UserCardDirective);
+
+myApp.filter('unsafe', function($sce) {
+    return function(val) {
+        return $sce.trustAsHtml(val);
+    };
+});
 
 FormAdvertController.submitAdvert = function(event) {
     SideNavController.searchAvert();

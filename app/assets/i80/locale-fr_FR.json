@@ -1,4 +1,11 @@
 {
+    "ENCODING_URL": "https://unicode-table.com/fr/#control-character",
+    "ENCODING_E_ACUTE": "è => \u00e8 https://unicode-table.com/fr/00E8/",
+    "ENCODING_E_GRAVE": "é => \u00e9 https://unicode-table.com/fr/00E9/",
+    "ENCODING_A_ACUTE": "à => \u00e0 https://unicode-table.com/fr/00E0/",
+    "ENCODING_A_CIRC" : "â => \u00e2 https://unicode-table.com/fr/00E2/",
+    "ENCODING_O_CIRC" : "ô => \u00f4 https://unicode-table.com/fr/00F4/",
+
     "SIDENAV_TOOLBAR_TAB_LINK": "LIEN",
     "SIDENAV_TOOLBAR_TAB_SEARCH": "TROUVER",
     "SIDENAV_TOOLBAR_TAB_ADD": "AJOUTER",
@@ -6,7 +13,7 @@
     "ADVERT_FORM_CREATE_FIRSTNAME": "Prenom",
     "ADVERT_FORM_CREATE_LASTNAME": "Nom",
     "ADVERT_FORM_CREATE_EMAIL": "Email",
-    "ADVERT_FORM_CREATE_PHONE_NUMBER": "Telephone",
+    "ADVERT_FORM_CREATE_PHONE_NUMBER": "T\u00e9l\u00e9phone",
     "ADVERT_FORM_CREATE_ADDRESS": "Adresse/Arrondissement/Quartier",
     "ADVERT_FORM_CREATE_CITY": "Ville",
     "ADVERT_FORM_CREATE_DESCRIPTION": "Annonce",
@@ -14,5 +21,22 @@
     "ADVERT_FORM_CREATE_TAB_CHILD": "Enfant",
     "ADVERT_FORM_CREATE_TAB_CONTACT": "Contact",
     "ADVERT_FORM_CREATE_TAB_LOCATION": "Adresse",
-    "ADVERT_FORM_CREATE_TAB_DESCRIPTION": "Annonce"
+    "ADVERT_FORM_CREATE_TAB_DESCRIPTION": "Annonce",
+
+    "CITATION_ENFANCE_01_MESSAGE": "L'enfance est une douce \u00e9poque \u00e0 laquelle on souhaite g\u00e9n\u00e9ralement revenir.",
+    "CITATION_ENFANCE_01_AUTHOR": "",
+    "CITATION_ENFANCE_02_MESSAGE": "Cette p\u00e9riode de nos vies correspond \u00e0 l'\u00e9veil au monde et \u00e0 sa propre conscience.",
+    "CITATION_ENFANCE_02_AUTHOR": "",
+    "CITATION_CONTACT_01_MESSAGE": "Le contact humain est le v\u00e9hicule essentiel de la d\u00e9mocratie.",
+    "CITATION_CONTACT_01_AUTHOR": "Jacques Chirac",
+    "CITATION_CONTACT_02_MESSAGE": "C'est au contact d'autrui que l'homme apprend ce qu'il sait.",
+    "CITATION_CONTACT_02_AUTHOR": "Euripide",
+    "CITATION_ADRESSE_01_MESSAGE": "Pour rentrer chez vous, une seule adresse, la v\u00f4tre !",
+    "CITATION_ADRESSE_01_AUTHOR": "Francis Blanche",
+    "CITATION_ADRESSE_02_MESSAGE": "L'adresse n'est autre chose qu'une juste dispensation des forces que l'on a.",
+    "CITATION_ADRESSE_02_AUTHOR": "Francis Blanche",
+    "CITATION_ANNONCE_01_MESSAGE": "Le printemps s'annonce toujours rempli de promesses... sans jamais nous mentir, sans jamais d\u00e9faillir.",
+    "CITATION_ANNONCE_01_AUTHOR": "Michel Bouthot",
+    "CITATION_ANNONCE_02_MESSAGE": "Les petites annonces ont ceci de curieux que les meilleurs emplois se trouvent toujours dans les demandes.",
+    "CITATION_ANNONCE_02_AUTHOR": ""
 }
