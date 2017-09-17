@@ -7,7 +7,7 @@ function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertServic
 
     self.data = angular.copy($advertService.advertSelected);
     self.data.birthday = new Date();
-    self.selectedFormIndex = 0;
+    self.selectedFormIndex = 2;
 
     self.init = function(form) {
         if (!form.$valid) {

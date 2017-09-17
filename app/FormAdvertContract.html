@@ -1,0 +1,36 @@
+<div layout-gt-sm="row">
+
+    <md-input-container class="md-icon-float md-block" flex-gt-sm>
+        <mdp-date-picker mdp-open-on-click required id="dateFrom" ng-model="add.data.contract.dateFrom" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_DATE_FROM' | translate}}" mdp-format="DD/MM/YYYY"></mdp-date-picker>
+    </md-input-container>
+
+</div>
+
+<div layout-gt-sm="row">
+
+    <md-input-container class="md-icon-float md-block" flex-gt-sm>
+        <mdp-time-picker mdp-open-on-click required id="houreFrom" ng-model="add.data.contract.dateFrom" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_DATE_FROM' | translate}}" mdp-format="HH:mm"></mdp-time-picker>
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block" flex-gt-sm>
+        <mdp-time-picker mdp-open-on-click required id="houreTo" ng-model="add.data.contract.dateFrom" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_DATE_TO' | translate}}" mdp-format="HH:mm"></mdp-time-picker>
+    </md-input-container>
+
+</div>
+
+<div layout-gt-sm="row">
+
+    <md-input-container class="md-icon-float md-block" flex-gt-sm>
+        <div layout="row" layout-align="start center">
+            <div class="md-padding" layout="row" layout-align="center center"><p>{{'ADVERT_FORM_CREATE_CONTRACT_MONTDAY' | translate}}</p></div>
+            <mdp-time-picker mdp-open-on-click required class="md-padding" id="houreFrom" ng-model="add.data.contract.dateFrom" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_HOURE_FROM' | translate}}" mdp-format="HH:mm"></mdp-time-picker>
+            <mdp-time-picker mdp-open-on-click required class="md-padding" id="houreTo" ng-model="add.data.contract.dateFrom" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_HOURE_TO' | translate}}" mdp-format="HH:mm"></mdp-time-picker>
+        </div>
+        {{'ADVERT_FORM_CREATE_CONTRACT_TUESDAY' | translate}}
+        {{'ADVERT_FORM_CREATE_CONTRACT_WEDNESDAY' | translate}}
+        {{'ADVERT_FORM_CREATE_CONTRACT_THURSDAY' | translate}}
+        {{'ADVERT_FORM_CREATE_CONTRACT_FRIDAY' | translate}}
+        {{'ADVERT_FORM_CREATE_CONTRACT_SATURDAY' | translate}}
+        {{'ADVERT_FORM_CREATE_CONTRACT_SUNDAY' | translate}}
+    </md-input-container>
+</div>

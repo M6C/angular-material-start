@@ -15,6 +15,9 @@
                 <div class="md-padding switch-show-hide" role="tabpanelform" id="form4-content" aria-labelledby="form4" ng-switch-when="3">
                     <citation index="app.selectedFormIndex"></citation>
                 </div>
+                <div class="md-padding switch-show-hide" role="tabpanelform" id="form5-content" aria-labelledby="form5" ng-switch-when="4">
+                    <citation index="app.selectedFormIndex"></citation>
+                </div>
             </ng-switch>
         </div>
     
@@ -29,9 +32,12 @@
                     <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_CONTACT' | translate}}</md-tab-label>
                 </md-tab>
                 <md-tab id="form3">
-                    <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_LOCATION' | translate}}</md-tab-label>
+                    <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_CONTRACT' | translate}}</md-tab-label>
                 </md-tab>
                 <md-tab id="form4">
+                    <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_LOCATION' | translate}}</md-tab-label>
+                </md-tab>
+                <md-tab id="form5">
                     <md-tab-label>{{'ADVERT_FORM_CREATE_TAB_DESCRIPTION' | translate}}</md-tab-label>
                 </md-tab>
             </md-tabs>
@@ -44,9 +50,12 @@
                     <div ng-include="'FormAdvertContact.html'"></div>
                 </div>
                 <div class="switch-show-hide" role="tabpanelform" id="form3-content" aria-labelledby="form3" ng-switch-when="2">
-                    <div ng-include="'FormAdvertLocation.html'"></div>
+                    <div ng-include="'FormAdvertContract.html'"></div>
                 </div>
                 <div class="switch-show-hide" role="tabpanelform" id="form4-content" aria-labelledby="form4" ng-switch-when="3">
+                    <div ng-include="'FormAdvertLocation.html'"></div>
+                </div>
+                <div class="switch-show-hide" role="tabpanelform" id="form5-content" aria-labelledby="form5" ng-switch-when="4">
                     <div ng-include="'FormAdvertDescription.html'"></div>
                 </div>
             </ng-switch>

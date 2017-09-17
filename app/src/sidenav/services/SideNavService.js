@@ -10,7 +10,7 @@ function SideNavService() {
 var self = this;
 
     self.data = {
-        selectedIndex: 1
+        selectedIndex: 2
     };
 
     self.next = function() {

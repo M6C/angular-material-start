@@ -17,6 +17,10 @@ let component = {
                     {message:"CITATION_CONTACT_01_MESSAGE", author: "CITATION_CONTACT_01_AUTHOR"},
                     {message:"CITATION_CONTACT_02_MESSAGE", author: "CITATION_CONTACT_02_AUTHOR"}
                 ],
+                [ // Contract
+                    {message:"CITATION_CONTRACT_01_MESSAGE", author: "CITATION_CONTRACT_01_AUTHOR"},
+                    {message:"CITATION_CONTRACT_02_MESSAGE", author: "CITATION_CONTRACT_02_AUTHOR"}
+                ],
                 [ // Adresse
                     {message:"CITATION_ADRESSE_01_MESSAGE", author: "CITATION_ADRESSE_01_AUTHOR"},
                     {message:"CITATION_ADRESSE_02_MESSAGE", author: "CITATION_ADRESSE_02_AUTHOR"}
