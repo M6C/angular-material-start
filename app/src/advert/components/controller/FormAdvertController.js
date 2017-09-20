@@ -5,8 +5,19 @@
 function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertService, $mdpTimePicker) {
     var self = this;
 
-    self.data = angular.copy($advertService.advertSelected);
-    self.data.birthday = new Date();
+    let fnInitAdvert = function(advert) {
+        let ret = angular.copy(advert);
+        
+        if (!ret.birthday) {
+            ret.birthday = new Date();
+        }
+        if (!ret.contract) {
+            ret.contract = {};
+        }
+
+        return ret;
+    };
+    self.data = fnInitAdvert($advertService.advertSelected);
     self.selectedFormIndex = 2;
 
     self.init = function(form) {
@@ -25,11 +36,12 @@ function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertServic
         $sideNavService.seachAdvert();
     }
 
-    self.showTimePicker = function(ev, data) {
+    self.showTimePicker = function(ev, contract, field) {
         $mdpTimePicker($scope.currentTime, {
             targetEvent: ev
         }).then(function(selectedDate) {
-            eval('self.' + data + '= \'' + selectedDate + '\'');
+            // contract[field] = selectedDate;
+            self.data.contract[field] = selectedDate;
         });
     }  
 }

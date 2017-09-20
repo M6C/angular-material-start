@@ -29,7 +29,11 @@
                 <div flex="20" layout="row" layout-align="start center"><p>
                     {{'ADVERT_FORM_CREATE_CONTRACT_MONTDAY' | translate}}
                 </p></div>
-                <md-input-container flex="15" class="contract-time-from-monday"><input id="houreFrom" ng-click="app.showTimePicker($event, 'data.contract.houreFrom')" mdp-auto-switch="true" required/></md-input-container>
+                <md-input-container flex="15" class="contract-time-from-monday">
+                    <!--<input id="houreFrom" mdp-format="hh:mm" ng-click="app.showTimePicker($event, app.data.contract, 'houreFrom')" ng-model="app.data.contract.houreFrom" mdp-auto-switch="true" required/>-->
+                    <mdp-time-picker name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-auto-switch="true" mdp-open-on-click required>
+                    </mdp-time-picker>
+                </md-input-container>
                 <md-input-container flex="15" class="contract-time-to-monday"><input type="time" id="houreTo" ng-model="add.data.contract.dateTo" mdp-time-picker mdp-auto-switch="true" mdp-open-on-click required/></md-input-container>
             </div>
             <div layout="row">
