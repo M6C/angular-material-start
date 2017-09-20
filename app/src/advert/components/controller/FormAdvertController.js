@@ -2,7 +2,7 @@
  * Form Advert Controller for the Angular Material Starter App
  * @constructor
  */
-function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertService) {
+function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertService, $mdpTimePicker) {
     var self = this;
 
     self.data = angular.copy($advertService.advertSelected);
@@ -24,6 +24,14 @@ function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertServic
         $advertService.addAdvert(this.data);
         $sideNavService.seachAdvert();
     }
+
+    self.showTimePicker = function(ev, data) {
+        $mdpTimePicker($scope.currentTime, {
+            targetEvent: ev
+        }).then(function(selectedDate) {
+            eval('self.' + data + '= \'' + selectedDate + '\'');
+        });
+    }  
 }
 
-export default [ '$mdSidenav', '$scope', 'SideNavService', 'AdvertService', FormAdvertController ];
+export default [ '$mdSidenav', '$scope', 'SideNavService', 'AdvertService', '$mdpTimePicker', FormAdvertController ];
