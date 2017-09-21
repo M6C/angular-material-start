@@ -106,6 +106,49 @@ md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-
     margin: 0px;
 }
 
+/*
+.time-picker-no-icon mdp-time-picker md-input-container.md-has-icon,
+.time-picker-no-icon mdp-time-picker .md-button.md-icon-button {
+*/
+.formadvert mdp-time-picker md-input-container.md-has-icon,
+.formadvert mdp-time-picker .md-button.md-icon-button {
+    height: 0px;
+    width: 0px;
+    min-width: 0px;
+    min-height: 0px;
+    line-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+/*
+.time-picker-no-icon md-icon {
+    height: 0px;
+    width: 0px;
+    min-height: 0px;
+    min-width: 0px;
+}
+
+.time-picker-no-icon mdp-time-picker.md-button.md-icon-button
+,
+mdp-time-picker .md-button.md-icon-button
+{
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+}
+
+.time-picker-no-icon button {
+    height: 0px;
+    width: 0px;
+    min-width: 0px;
+    min-height: 0px;
+    line-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+*/
+
 /**
  * Form Advert Citation
  */
