@@ -1,107 +1,121 @@
+<md-tabs md-selected="app.selectedContractTimeIndex" layout="column" md-align-tabs="{{app.data.bottom ? 'bottom' : 'top'}}">
+    <md-tab id="form1">
+        <md-tab-label>0</md-tab-label>
+    </md-tab>
+    <md-tab id="form2">
+        <md-tab-label>1</md-tab-label>
+    </md-tab>
+</md-tabs>
 <div layout-gt-sm="row">
 
-    <md-input-container class="md-icon-float md-block" flex="25">
-        <mdp-date-picker mdp-open-on-click required id="dateFrom" ng-model="add.data.contract.dateFrom" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_DATE_FROM' | translate}}" mdp-format="DD/MM/YYYY"></mdp-date-picker>
-    </md-input-container>
-<!--
-</div>
+    <div layout="column">
+            <div layout="row"><p>&nbsp;</p></div>
+        <md-input-container class="md-icon-float md-block" flex="25">
+            <mdp-date-picker mdp-open-on-click required id="dateFrom" ng-model="add.data.contract.dateFrom" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_DATE_FROM' | translate}}" mdp-format="DD/MM/YYYY"></mdp-date-picker>
+        </md-input-container>
+    </div>
 
-<div layout-gt-sm="row">
--->
-    <md-input-container class="md-icon-float md-block" flex="25">
-        <mdp-time-picker mdp-open-on-click mdp-auto-switch="true" required id="houreFrom" ng-model="add.data.contract.dateFrom" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_FROM' | translate}}" mdp-format="HH:mm"></mdp-time-picker>
-    </md-input-container>
-
-    <md-input-container class="md-icon-float md-block" flex="25">
-        <mdp-time-picker mdp-open-on-click mdp-auto-switch="true" required id="houreTo" ng-model="add.data.contract.dateTo" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_TO' | translate}}" mdp-format="HH:mm"></mdp-time-picker>
-    </md-input-container>
-
-</div>
-
-<div layout-gt-sm="row">
-
-    <md-input-container class="md-icon-float md-block" flex="25">
-    </md-input-container>
-
-    <md-input-container class="md-icon-float md-block" flex="50">
-        <div layout="column">
+    <ng-switch on="app.selectedContractTimeIndex" flex="75">
+        <div layout="column" class="switch-show-hide" role="tabpanelform" aria-labelledby="form1" ng-switch-when="0">
+            <div layout="row" layout-align="center center"><p>
+                {{'ADVERT_FORM_CREATE_CONTRACT_WEEK' | translate}}
+            </p></div>
             <div layout="row">
-                <div flex="20" layout="row" layout-align="start center"><p>
-                    {{'ADVERT_FORM_CREATE_CONTRACT_MONTDAY' | translate}}
-                </p></div>
-                <md-input-container flex="15" class="contract-time-from-monday">
-                    <mdp-time-picker required id="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                <md-input-container>
+                    <mdp-time-picker mdp-open-on-click mdp-auto-switch="true" required id="houreFrom" ng-model="add.data.contract.dateFrom" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_FROM' | translate}}" mdp-format="HH:mm"></mdp-time-picker>
                 </md-input-container>
-                <md-input-container flex="15" class="contract-time-from-monday">
-                    <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-            </div>
-            <div layout="row">
-                <div flex="20" layout="row" layout-align="start center"><p>
-                    {{'ADVERT_FORM_CREATE_CONTRACT_TUESDAY' | translate}}
-                </p></div>
-                <md-input-container flex="15" class="contract-time-from-tuesday">
-                    <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-                <md-input-container flex="15" class="contract-time-from-tuesday">
-                    <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-            </div>
-            <div layout="row">
-                <div flex="20" layout="row" layout-align="start center"><p>
-                    {{'ADVERT_FORM_CREATE_CONTRACT_WEDNESDAY' | translate}}
-                </p></div>
-                <md-input-container flex="15" class="contract-time-from-wednesday">
-                    <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-                <md-input-container flex="15" class="contract-time-from-wednesday">
-                    <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-            </div>
-            <div layout="row">
-                <div flex="20" layout="row" layout-align="start center"><p>
-                    {{'ADVERT_FORM_CREATE_CONTRACT_THURSDAY' | translate}}
-                </p></div>
-                <md-input-container flex="15" class="contract-time-from-thursday">
-                    <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-                <md-input-container flex="15" class="contract-time-from-thursday">
-                    <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-            </div>
-            <div layout="row">
-                <div flex="20" layout="row" layout-align="start center"><p>
-                        {{'ADVERT_FORM_CREATE_CONTRACT_FRIDAY' | translate}}
-                </p></div>
-                <md-input-container flex="15" class="contract-time-from-friday">
-                    <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-                <md-input-container flex="15" class="contract-time-from-friday">
-                    <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-            </div>
-            <div layout="row">
-                <div flex="20" layout="row" layout-align="start center"><p>
-                    {{'ADVERT_FORM_CREATE_CONTRACT_SATURDAY' | translate}}
-                </p></div>
-                <md-input-container flex="15" class="contract-time-from-saturday">
-                    <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-                <md-input-container flex="15" class="contract-time-from-saturday">
-                    <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-            </div>
-            <div layout="row">
-                <div flex="20" layout="row" layout-align="start center"><p>
-                    {{'ADVERT_FORM_CREATE_CONTRACT_SUNDAY' | translate}}
-                </p></div>
-                <md-input-container flex="15" class="contract-time-from-sunday">
-                    <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
-                </md-input-container>
-                <md-input-container flex="15" class="contract-time-from-sunday">
-                    <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+            
+                <md-input-container>
+                    <mdp-time-picker mdp-open-on-click mdp-auto-switch="true" required id="houreTo" ng-model="add.data.contract.dateTo" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_TO' | translate}}" mdp-format="HH:mm"></mdp-time-picker>
                 </md-input-container>
             </div>
         </div>
-    </md-input-container>
+        
+        <div class="switch-show-hide" role="tabpanelform" aria-labelledby="form2" ng-switch-when="1">
+            <div layout="row" layout-align="center center"><p>
+                {{'ADVERT_FORM_CREATE_CONTRACT_BY_DAY' | translate}}
+            </p></div>
+            <div layout="row" style="margin: 36px 0;">
+            <div layout="column" class="md-icon-float md-block contract-time">
+                <div layout="row" class="contract-time-row">
+                    <div flex="20" layout="row" layout-align="start center"><p>
+                        {{'ADVERT_FORM_CREATE_CONTRACT_MONTDAY' | translate}}
+                    </p></div>
+                    <md-input-container flex="15" class="contract-time-from-monday">
+                        <mdp-time-picker required id="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                    <md-input-container flex="15" class="contract-time-from-monday">
+                        <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                </div>
+                <div layout="row" class="contract-time-row">
+                    <div flex="20" layout="row" layout-align="start center"><p>
+                        {{'ADVERT_FORM_CREATE_CONTRACT_TUESDAY' | translate}}
+                    </p></div>
+                    <md-input-container flex="15" class="contract-time-from-tuesday">
+                        <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                    <md-input-container flex="15" class="contract-time-from-tuesday">
+                        <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                </div>
+                <div layout="row" class="contract-time-row">
+                    <div flex="20" layout="row" layout-align="start center"><p>
+                        {{'ADVERT_FORM_CREATE_CONTRACT_WEDNESDAY' | translate}}
+                    </p></div>
+                    <md-input-container flex="15" class="contract-time-from-wednesday">
+                        <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                    <md-input-container flex="15" class="contract-time-from-wednesday">
+                        <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                </div>
+                <div layout="row" class="contract-time-row">
+                    <div flex="20" layout="row" layout-align="start center"><p>
+                        {{'ADVERT_FORM_CREATE_CONTRACT_THURSDAY' | translate}}
+                    </p></div>
+                    <md-input-container flex="15" class="contract-time-from-thursday">
+                        <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                    <md-input-container flex="15" class="contract-time-from-thursday">
+                        <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                </div>
+                <div layout="row" class="contract-time-row">
+                    <div flex="20" layout="row" layout-align="start center"><p>
+                            {{'ADVERT_FORM_CREATE_CONTRACT_FRIDAY' | translate}}
+                    </p></div>
+                    <md-input-container flex="15" class="contract-time-from-friday">
+                        <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                    <md-input-container flex="15" class="contract-time-from-friday">
+                        <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                </div>
+                <div layout="row" class="contract-time-row">
+                    <div flex="20" layout="row" layout-align="start center"><p>
+                        {{'ADVERT_FORM_CREATE_CONTRACT_SATURDAY' | translate}}
+                    </p></div>
+                    <md-input-container flex="15" class="contract-time-from-saturday">
+                        <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                    <md-input-container flex="15" class="contract-time-from-saturday">
+                        <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                </div>
+                <div layout="row" class="contract-time-row">
+                    <div flex="20" layout="row" layout-align="start center"><p>
+                        {{'ADVERT_FORM_CREATE_CONTRACT_SUNDAY' | translate}}
+                    </p></div>
+                    <md-input-container flex="15" class="contract-time-from-sunday">
+                        <mdp-time-picker required name="houreFrom" ng-model="app.data.contract.houreFrom" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                    <md-input-container flex="15" class="contract-time-from-sunday">
+                        <mdp-time-picker required name="houreTo" ng-model="app.data.contract.houreTo" mdp-no-float="" mdp-placeholder="{{'ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER' | translate}} *" mdp-auto-switch="true" mdp-open-on-click></mdp-time-picker>
+                    </md-input-container>
+                </div>
+            </div>
+            </div>
+        </div>
+    </ng-switch>
 </div>

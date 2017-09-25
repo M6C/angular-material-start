@@ -27,6 +27,8 @@
     "ADVERT_FORM_CREATE_CONTRACT_TIME_FROM": "Heure de d\u00e9but de garde",
     "ADVERT_FORM_CREATE_CONTRACT_TIME_TO": "Heure de fin de garde",
     "ADVERT_FORM_CREATE_CONTRACT_TIME_PLACEHOLDER": "HH:mm",
+    "ADVERT_FORM_CREATE_CONTRACT_WEEK":"Horaire de la semaine (Lundi au Vendredi)",
+    "ADVERT_FORM_CREATE_CONTRACT_BY_DAY":"Horaire de la semaine par jour",
     "ADVERT_FORM_CREATE_CONTRACT_MONTDAY": "Lundi",
     "ADVERT_FORM_CREATE_CONTRACT_TUESDAY": "Mardi",
     "ADVERT_FORM_CREATE_CONTRACT_WEDNESDAY": "Mercredi",

@@ -19,6 +19,7 @@ function FormAdvertController($mdSidenav, $scope, $sideNavService, $advertServic
     };
     self.data = fnInitAdvert($advertService.advertSelected);
     self.selectedFormIndex = 2;
+    self.selectedContractTimeIndex = 0;
 
     self.init = function(form) {
         if (!form.$valid) {

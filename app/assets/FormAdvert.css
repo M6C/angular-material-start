@@ -63,15 +63,24 @@
 /**
  * mdPickers
  */
-.formadvert md-input-container label {
-    margin: 0px 0px 0px 6px;
-}
 .formadvert md-input-container {
     width: 100%;
 }
 
+.formadvert .contract-time md-input-container {
+    margin: 0px 0px 0px 0px;
+}
+
+.formadvert md-input-container label {
+    margin: 0px 0px 0px 6px;
+}
+
 .formadvert md-input-container .md-errors-spacer {
     min-height: 0px;
+}
+
+.formadvert .contract-time-row {
+    padding:0px 18px 0px 18px;
 }
 
 .formadvert 
